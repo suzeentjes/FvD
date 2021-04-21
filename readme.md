@@ -6,6 +6,19 @@
 
 Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Nb. de standaardstructuur en de spartaanse opmaak zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
 
+## Je 'posts' (je code-dagboek)
+
+Je procesverslag is een soort dagboek.
+Bij elk voortgangsgesprek en het eindgesprek voeg je een ‘post’ aan je dagboek toe.
+
+In zo’n ‘post’ neem je op:
+- Wat je van plan was
+- Je werk zo ver
+- Wat er goed ging
+- Wat er lastig is
+- Wat je plannen zijn
+
+
 ## Week 2
 - Wat je van plan was
 Ik heb de afgelopen weken meer geleerd over custom properties, het animeren van elementen, border,radius, box-shadow, gradient text en befor and after.
@@ -30,17 +43,4 @@ Mijn plannen voor de komende weken zijn om een begin te maken aan mijn eerste an
 2. -bron 2-
 3. -...-
 
-## Week 1
-
-
-## Je 'posts' (je code-dagboek)
-
-Je procesverslag is een soort dagboek.
-Bij elk voortgangsgesprek en het eindgesprek voeg je een ‘post’ aan je dagboek toe.
-
-In zo’n ‘post’ neem je op:
-- Wat je van plan was
-- Je werk zo ver
-- Wat er goed ging
-- Wat er lastig is
-- Wat je plannen zijn
+## Week 3
