@@ -20,21 +20,21 @@ In zo’n ‘post’ neem je op:
 
 
 ## Week 2
-- Wat je van plan was
+- <b>Wat je van plan was</b>
 Ik heb de afgelopen weken meer geleerd over custom properties, het animeren van elementen, border,radius, box-shadow, gradient text en befor and after.
 Deze week ben ik van plan om naast het eerste font van lego ook het font van pinterest te vinden, zodat dat allemaal geregeld is en ik deze week kan
 beginnen met het maken van een begin van mijn animatie.
 
-- Je werk zo ver
+- <b>Je werk zo ver</b>
 Het werk dat ik tot nu heb gemaakt zijn alle opdrachten die we tot nu toe hebben gekregen. Ook heb ik al een klein begin gemaakt met de fonts te installeren en het in  het css-bestand gezet.  
 
-- Wat er goed ging
+- <b>Wat er goed ging</b>
 Het animeren van de poppetjes ging erg goed en ook border-radius, en gradient gingen erg goed.
 
-- Wat er lastig is
+- <b>Wat er lastig is</b>
 Ik vind de ::before en :: after best lastig, dus hier zal ik veel op moeten oefenen.
 
-- Wat je plannen zijn
+- <b>Wat je plannen zijn</b>
 Mijn plannen voor de komende weken zijn om een begin te maken aan mijn eerste animatie van lego en deze nog specifieker uit te tekenen, zodat elke stap die ik moet animeren duidelijk is.
 
 
