@@ -2,9 +2,9 @@
 
 /* FONTS */
 @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
+	font-family: 'legothictype';
+	src: url('../fonts/legothick-webfont.woff2') format('woff2'),
+			 url('../fonts/legothick-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 
@@ -13,7 +13,7 @@
 
 /* ALGEMENE STYLING */
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box;
 }
 
 body {
@@ -22,6 +22,9 @@ body {
   background-color:#eee;
 }
 
+h1 {
+	font-family: 'legothictype';
+}
+
 
 /* BRAND STYLING */
-
