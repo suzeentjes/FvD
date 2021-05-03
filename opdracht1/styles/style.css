@@ -66,6 +66,12 @@ section {
 }
 
 
+/*Lego*/
+
+.lego h1 {
+	display: inline-block;
+	position: relative;
+}
 
 .lego span {
 	color: black;
@@ -90,7 +96,8 @@ section {
 /*Lego logo uit aan de hand van lijnen */
 
 div {
-	margin: auto 0;
+	display: inline-block;
+	position: relative;
 }
 
 svg {
@@ -124,36 +131,41 @@ path {
 
 
 /*Pinterest*/
+
+.pinterest h1 {
+	display: inline-block;
+	position: relative;
+}
+
 .pinterest:hover span:first-of-type {
 	color: grey;
-	animation: pomhoog-animation 5s linear infinite alternate;
+	animation: pinafter-animation 1s linear infinite alternate;
+	display: inline-block;
 }
 
 .pinterest:hover span:first-of-type::after {
 	content: "";
 	position: absolute;
-	display: inline-block;
 	height: 0.65em;
 	width: 0.75em;
 	background-color: #F41929;
 	border-radius: 50%;
-	left: 6.5em;
-	animation: pomhoog-animation 1s linear infinite alternate;
+	left: 0.15em;
+	animation: pinafter-animation 1s linear infinite alternate;
 }
 
 
 .pinterest:hover span:first-of-type::before {
 	content: "";
 	position: absolute;
-	display: inline-block;
 	height: 0.61em;
 	width: 0.54em;
 	top: 0.28em;
 	border-radius: 4em / 8em;
 	background-color: #DB1625;
-	left: 6.54em;
+	left: 0.17em;
 	transform: rotate(285deg);
-	animation: pomhoog-animation 1s linear infinite alternate;
+	animation: pinbefore-animation 1s linear infinite alternate;
 
 }
 
@@ -167,7 +179,7 @@ path {
 
 
 
-@keyframes pomhoog-animation {
+@keyframes pinbefore-animation {
 	0% {
 		transform:translateY(0) rotate(285deg);
 	}
@@ -186,5 +198,27 @@ path {
 
 	100%{
 		transform:translateY(-1.5em) rotate(285deg)
+	}
+}
+
+@keyframes pinafter-animation {
+	0% {
+		transform:translateY(0);
+	}
+
+	25% {
+	  transform:translateY(-0.75em);
+	}
+
+	50%{
+		transform:translateY(-1em);
+	}
+
+	75% {
+		transform:translateY(-1.25em);
+	}
+
+	100%{
+		transform:translateY(-1.5em);
 	}
 }
