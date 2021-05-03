@@ -10,6 +10,16 @@
 
 }
 
+@font-face {
+    font-family: 'danubia_scriptregular';
+    src: url('../fonts/danubiascript-webfont.woff2') format('woff2'),
+         url('../fonts/danubiascript-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 
 /* ALGEMENE STYLING */
 *, *::after, *::before {
@@ -19,12 +29,162 @@
 body {
   font-family:eenfont, sans-serif;
   color:#111;
-  background-color:#eee;
+  background-color: white;
+
+
 }
 
-h1 {
-	font-family: 'legothictype';
-}
+
 
 
 /* BRAND STYLING */
+
+
+
+/*Letters stijlen*/
+
+section {
+	text-align: center;
+}
+
+.pinterest {
+	font-family: 'danubia_scriptregular';
+	color: red;
+	letter-spacing: -5px;
+	position: relative;
+	top:100px;
+	font-size: min(10vw, 4em);
+
+}
+
+.lego {
+	font-family: 'legothictype';
+	letter-spacing: -20px;
+	position: relative;
+	top: 200px;
+	font-size: min(10vw, 5em);
+}
+
+
+
+.lego span {
+	color: black;
+}
+
+.lego:hover span:first-of-type {
+	color: blue;
+}
+
+.lego:hover span:nth-of-type(2) {
+	 color: green;
+}
+
+.lego:hover span:nth-of-type(3) {
+	 color: red;
+}
+
+.lego:hover span:nth-of-type(4) {
+	 color: orange;
+}
+
+/*Lego logo uit aan de hand van lijnen */
+
+div {
+	margin: auto 0;
+}
+
+svg {
+	width: 3.5em;
+	top: 0;
+	position: relative;
+
+}
+
+
+
+path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: lego-line 5s linear  infinite;
+	display: block;
+	margin-right: 20px;
+
+}
+
+@keyframes lego-line {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+
+/*Pinterest*/
+.pinterest:hover span:first-of-type {
+	color: grey;
+	animation: pomhoog-animation 5s linear infinite alternate;
+}
+
+.pinterest:hover span:first-of-type::after {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	height: 0.65em;
+	width: 0.75em;
+	background-color: #F41929;
+	border-radius: 50%;
+	left: 6.5em;
+	animation: pomhoog-animation 1s linear infinite alternate;
+}
+
+
+.pinterest:hover span:first-of-type::before {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	height: 0.61em;
+	width: 0.54em;
+	top: 0.28em;
+	border-radius: 4em / 8em;
+	background-color: #DB1625;
+	left: 6.54em;
+	transform: rotate(285deg);
+	animation: pomhoog-animation 1s linear infinite alternate;
+
+}
+
+.pinterest:hover span:first-of-type::after,
+.pinterest:hover span:first-of-type::before,
+.pinterest:hover span:first-of-type{
+  opacity:1;
+  animation-play-state:running;
+	animation-delay: 3s;
+}
+
+
+
+@keyframes pomhoog-animation {
+	0% {
+		transform:translateY(0) rotate(285deg);
+	}
+
+	25% {
+	  transform:translateY(-0.75em) rotate(285deg);
+	}
+
+	50%{
+		transform:translateY(-1em) rotate(285deg);
+	}
+
+	75% {
+		transform:translateY(-1.25em) rotate(285deg);
+	}
+
+	100%{
+		transform:translateY(-1.5em) rotate(285deg)
+	}
+}
