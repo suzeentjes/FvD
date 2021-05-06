@@ -52,7 +52,7 @@ section {
 	color: red;
 	letter-spacing: -5px;
 	position: relative;
-	top:100px;
+	top:150px;
 	font-size: min(10vw, 4em);
 
 }
@@ -61,7 +61,7 @@ section {
 	font-family: 'legothictype';
 	letter-spacing: -20px;
 	position: relative;
-	top: 200px;
+	top: 250px;
 	font-size: min(10vw, 5em);
 }
 
@@ -135,15 +135,31 @@ path {
 .pinterest h1 {
 	display: inline-block;
 	position: relative;
+
 }
 
-.pinterest:hover span:first-of-type {
-	color: grey;
-	animation: pinafter-animation 1s linear infinite alternate;
+.pinterest span:nth-of-type(2) {
 	display: inline-block;
+	position: absolute;
+	left: 0;
+
 }
 
-.pinterest:hover span:first-of-type::after {
+.pinterest span:first-of-type {
+	z-index: 10;
+	opacity: 0;
+}
+
+/*Wanneer erover Pinterest heen gehovert wordt, krijgt de eerste span een grijze kleur en animatie start */
+.pinterest:hover span:nth-of-type(2) {
+	color: grey;
+	animation: pinafter-animation 10s ease-out;
+	display: inline-block;
+	z-index: 10;
+
+}
+
+.pinterest:hover span:nth-of-type(2)::after {
 	content: "";
 	position: absolute;
 	height: 0.65em;
@@ -151,11 +167,11 @@ path {
 	background-color: #F41929;
 	border-radius: 50%;
 	left: 0.15em;
-	animation: pinafter-animation 1s linear infinite alternate;
+	z-index: 10;
 }
 
 
-.pinterest:hover span:first-of-type::before {
+.pinterest:hover span:nth-of-type(2)::before {
 	content: "";
 	position: absolute;
 	height: 0.61em;
@@ -165,18 +181,16 @@ path {
 	background-color: #DB1625;
 	left: 0.17em;
 	transform: rotate(285deg);
-	animation: pinbefore-animation 1s linear infinite alternate;
-
+	z-index: 10;
 }
 
-.pinterest:hover span:first-of-type::after,
-.pinterest:hover span:first-of-type::before,
-.pinterest:hover span:first-of-type{
-  opacity:1;
+.pinterest:hover span:nth-last-of-type(2)::after,
+.pinterest:hover span:nth-last-of-type(2)::before,
+.pinterest:hover span:nth-of-type(2){
   animation-play-state:running;
-	animation-delay: 3s;
+	animation-delay: 1s;
+	z-index: 10;
 }
-
 
 
 @keyframes pinbefore-animation {
@@ -186,10 +200,11 @@ path {
 
 	25% {
 	  transform:translateY(-0.75em) rotate(285deg);
+		right: 3em;
 	}
 
 	50%{
-		transform:translateY(-1em) rotate(285deg);
+		transform:translateY(-1em)  rotate(285deg);
 	}
 
 	75% {
@@ -206,19 +221,59 @@ path {
 		transform:translateY(0);
 	}
 
-	25% {
-	  transform:translateY(-0.75em);
+
+	10% {
+		transform:translate(250px, -2.2em);
 	}
 
-	50%{
-		transform:translateY(-1em);
+
+	15% {
+		transform:translate(250px, -2.2em);
 	}
 
-	75% {
-		transform:translateY(-1.25em);
+	20% {
+		transform:translate(250px, -1.5em);
+
 	}
 
 	100%{
-		transform:translateY(-1.5em);
+		transform:translate(250px, -1.5em);
+
+	}
+}
+/*geel post-it*/
+section:first-of-type div {
+	content: "";
+	position: absolute;
+	height: 4em;
+	width: 9em;
+	left: 0.17em;
+	background-color: #FFCE00;
+	display: inline-block;
+	animation: postit-animation 5s ease-out;
+}
+
+section:first-of-type div{
+  animation-play-state:running;
+	animation-delay: 2s;
+	opacity: 1;
+
+}
+
+@keyframes postit-animation {
+	0% {
+		transform:translateX(-50em);
+
+	}
+
+  20% {
+		transform:translateX(9.4em);
+
+	}
+
+
+	100%{
+		transform:translateX(9.4em);
+
 	}
 }
