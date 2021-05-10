@@ -27,14 +27,60 @@
 }
 
 body {
-  font-family:eenfont, sans-serif;
+  font-family: eenfont, sans-serif;
   color:#111;
-  background-color: white;
-
-
+  background-color: var(--kleurBackground);
 }
 
+@media (prefer-color-scheme: dark) {
+	:root {
+		-- kleurLetterO: #F9B233;
+		-- kleurLetterODark:#DB9F42;
+		-- kleurLetterG: red;
+		-- kleurLetterGDark: maroon;
+		-- kleurLetterE: #4CB741;
+		-- kleurLetterEDark: #3D9E33;
+		-- kleurLetterL: #3297D4;
+		-- kleurLetterLDark: #2E84B8;
+		-- kleurBackground: white;
+	}
+}
 
+@media (prefer-color-scheme:light) {
+	:root {
+		-- kleurLetterO: #F5F09E;
+		-- kleurLetterODark:#E5E097;
+		-- kleurLetterG: #F39EB6;
+		-- kleurLetterGDark: #E093AC;
+		-- kleurLetterE: #B2D59F;
+		-- kleurLetterEDark: #A3C191;
+		-- kleurLetterL: #B1DDE6;
+		-- kleurLetterLDark: #A8CCD1;
+		-- kleurBackground: black;
+	}
+}
+
+@media (prefer-color-scheme:dark) {
+	:root {
+		-- mainColor: red;
+		-- eerstSpanColor: grey;
+		-- pinBefore: #DB1625;
+		-- pinAfter: #F41929;
+		-- postIt: #FFCE00;
+
+	}
+}
+
+@media (prefer-color-scheme:light) {
+	:root {
+		-- mainColor: #F47F9B;
+		-- eerstSpanColor: #CCCCCC;
+		-- pinBefore: #F29CA4;
+		-- pinAfter: #E28890;
+		-- postIt: #F2D577;
+
+	}
+}
 
 
 /* BRAND STYLING */
@@ -49,19 +95,18 @@ section {
 
 .pinterest {
 	font-family: 'danubia_scriptregular';
-	color: red;
-	letter-spacing: -5px;
+	color: var(--mainColor);
+	letter-spacing: -7px;
 	position: relative;
-	top:150px;
+	top:350px;
 	font-size: min(10vw, 4em);
 
 }
 
 .lego {
 	font-family: 'legothictype';
-	letter-spacing: -20px;
 	position: relative;
-	top: 250px;
+	top: 225px;
 	font-size: min(10vw, 5em);
 }
 
@@ -77,55 +122,222 @@ section {
 	color: black;
 }
 
-.lego:hover span:first-of-type {
-	color: blue;
-}
+/*De letter O in Lego*/
+.lego span:first-of-type {
+	position:absolute;
+	margin: auto 0;
+	width:2em;
+	height:1.5em;
+	font-size: 0.5em;
+	padding-top: 0.55em;
+	animation: letterO 15s ease-in infinite;
+	transform-origin: right bottom;
 
-.lego:hover span:nth-of-type(2) {
-	 color: green;
-}
+/*The bovenste twee punten aan het lego blokje*/
+background-image:
+	linear-gradient(transparent .5em, var(-- kleurLetterO) .5em 2em),
+	linear-gradient(to right, var(-- kleurLetterODark), var(-- kleurLetterO) 33%, var(-- kleurLetterODark)),
+	linear-gradient(to right, var(-- kleurLetterODark), var(-- kleurLetterO) 33%, var(-- kleurLetterODark));
 
-.lego:hover span:nth-of-type(3) {
-	 color: red;
-}
-
-.lego:hover span:nth-of-type(4) {
-	 color: orange;
-}
-
-/*Lego logo uit aan de hand van lijnen */
-
-div {
-	display: inline-block;
-	position: relative;
-}
-
-svg {
-	width: 3.5em;
-	top: 0;
-	position: relative;
-
+background-size:100% 5em, 0.75em .5em, 0.75em .5em, 0.75em .5em;
+background-repeat:no-repeat;
+background-position:top center, top left, top right;
 }
 
 
+/*Animatie van de letter O*/
+@keyframes letterO {
+	0% {
+		transform: translate(-25em,-50em);
+	}
 
-path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: lego-line 5s linear  infinite;
-	display: block;
-	margin-right: 20px;
+	20% {
+		transform: translate(0, 0);
+	}
+
+	25% {
+		transform-origin: 100% 20%;
+		transform: translate(1em, -2em) rotate(45deg);
+	}
+
+	28% {
+		transform: translate(0, 0);
+	}
+
+
+	100% {
+		transform: translate(0, 0);
+	}
 
 }
 
-@keyframes lego-line {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+
+
+
+
+
+/*De letter G in Lego*/
+
+.lego span:nth-of-type(2) {
+	position:absolute;
+	margin: auto 0;
+	width:4em;
+	height:1.5em;
+	font-size: 0.5em;
+	padding-top: 0.55em;
+	animation: letterG 15s ease-in infinite;
+	opacity: 0;
+
+
+background-image:
+	linear-gradient(transparent .5em, red .5em 2em),
+	linear-gradient(to right, var(--kleurLetterGDark), var(--kleurLetterG) 33%, var(--kleurLetterGDark)),
+	linear-gradient(to right, var(--kleurLetterGDark), var(--kleurLetterG) 33%, var(--kleurLetterGDark)),
+	linear-gradient(to right, var(--kleurLetterGDark), var(--kleurLetterG) 33%, var(--kleurLetterGDark));
+
+background-size:100% 5em, 0.75em .5em, 0.75em .5em, 0.75em .5em;
+background-repeat:no-repeat;
+background-position:top center, top left, top center, top right;
 }
+
+
+/*Animatie van de letter G*/
+@keyframes letterG {
+	0% {
+		transform: translate(-25em,-50em) rotate(-180deg);
+		opacity: 100;
+	}
+
+	35% {
+		transform: translate(-1em, -1em);
+		opacity: 100;
+	}
+
+
+
+	100% {
+		transform: translate(-1em, -1em);
+		opacity: 100;
+	}
+
+}
+
+
+
+
+
+
+
+
+/*De letter E in Lego*/
+.lego span:nth-of-type(3) {
+	position:absolute;
+	margin: auto 0;
+	width:4em;
+	height:1.5em;
+	font-size: 0.5em;
+	padding-top: 0.55em;
+	animation: letterE 15s ease-in infinite;
+	opacity: 0;
+
+background-image:
+	linear-gradient(transparent .5em, #4CB741 .5em 2em),
+	linear-gradient(to right, #3D9E33, #4CB741 33%, #3D9E33),
+	linear-gradient(to right, #3D9E33, #4CB741 33%, #3D9E33),
+	linear-gradient(to right, #3D9E33, #4CB741 33%, #3D9E33);
+
+background-size:100% 5em, 0.75em .5em, 0.75em .5em, 0.75em .5em;
+background-repeat:no-repeat;
+background-position:top center, top left, top center, top right;
+}
+
+/*Animatie van de letter E*/
+@keyframes letterE {
+	0% {
+		transform: translate(-25em,-50em) rotate(-180deg);
+		opacity: 100;
+	}
+
+	35% {
+		transform: translate(-5em,-20em) rotate(1turn);
+	}
+
+	55% {
+		transform: translate(-2.5em, -2em);
+		opacity: 100;
+	}
+
+
+
+	100% {
+		transform: translate(-2.5em, -2em);
+		opacity: 100;
+	}
+
+}
+
+
+
+/*De letter L in Lego*/
+
+.lego span:nth-of-type(4){
+	position:absolute;
+	margin: auto 0;
+	width:2em;
+	height:1.5em;
+	font-size: 0.5em;
+	padding-top: 0.55em;
+	animation: letterL 15s ease-in infinite;
+	opacity: 0;
+
+
+background-image:
+	linear-gradient(transparent .5em, #3297D4.5em 2em),
+	linear-gradient(to right, #2E84B8, #3297D4 33%, #2E84B8),
+	linear-gradient(to right, #2E84B8, #3297D4 33%, #2E84B8);
+
+background-size:100% 5em, 0.75em .5em, 0.75em .5em, 0.75em .5em;
+background-repeat:no-repeat;
+background-position:top center, top left, top right;
+}
+
+/*Animatie van de letter L*/
+@keyframes letterL {
+	0% {
+		transform: translate(0,-50em) rotate(45deg);
+		opacity: 100;
+	}
+
+	42% {
+		transform: translate(0, -3em) rotate(45deg);
+		opacity: 100;
+	}
+
+	52% {
+		transform: translate(-80em,-50em) rotate(45deg);
+		opacity: 100;
+	}
+
+	60% {
+		transform: translate(-1em,-50em) ;
+		opacity: 100;
+	}
+
+	70% {
+		transform: translate(0.75em,-3em) ;
+		opacity: 100;
+	}
+
+	100% {
+		transform: translate(0.75em, -3em);
+		opacity: 100;
+	}
+
+}
+
+
+
+
 
 
 
@@ -138,28 +350,23 @@ path {
 
 }
 
-.pinterest span:nth-of-type(2) {
-	display: inline-block;
-	position: absolute;
-	left: 0;
-
-}
-
-.pinterest span:first-of-type {
-	z-index: 10;
-	opacity: 0;
+.pinterest span:nth-of-type(1) {
+	position: relative;
+	transform-origin: center bottom;
+	margin: auto 0;
 }
 
 /*Wanneer erover Pinterest heen gehovert wordt, krijgt de eerste span een grijze kleur en animatie start */
-.pinterest:hover span:nth-of-type(2) {
+.pinterest span:nth-of-type(1) {
 	color: grey;
-	animation: pinafter-animation 10s ease-out;
+	animation: pinafter-animation 8s ease-out infinite;
 	display: inline-block;
 	z-index: 10;
 
+
 }
 
-.pinterest:hover span:nth-of-type(2)::after {
+.pinterest span:nth-of-type(1)::after {
 	content: "";
 	position: absolute;
 	height: 0.65em;
@@ -171,7 +378,7 @@ path {
 }
 
 
-.pinterest:hover span:nth-of-type(2)::before {
+.pinterest span:nth-of-type(1)::before {
 	content: "";
 	position: absolute;
 	height: 0.61em;
@@ -179,17 +386,18 @@ path {
 	top: 0.28em;
 	border-radius: 4em / 8em;
 	background-color: #DB1625;
-	left: 0.17em;
+	left: 0.15em;
 	transform: rotate(285deg);
 	z-index: 10;
 }
 
-.pinterest:hover span:nth-last-of-type(2)::after,
-.pinterest:hover span:nth-last-of-type(2)::before,
-.pinterest:hover span:nth-of-type(2){
+.pinterest span:first-of-type::after,
+.pinterest span:first-of-type::before,
+.pinterest span:first-of-type{
   animation-play-state:running;
-	animation-delay: 1s;
+	animation-delay: 2.6s;
 	z-index: 10;
+
 }
 
 
@@ -198,9 +406,9 @@ path {
 		transform:translateY(0) rotate(285deg);
 	}
 
-	25% {
+	15% {
 	  transform:translateY(-0.75em) rotate(285deg);
-		right: 3em;
+		right: 5em;
 	}
 
 	50%{
@@ -222,58 +430,101 @@ path {
 	}
 
 
-	10% {
-		transform:translate(250px, -2.2em);
+	4% {
+		transform:translate(265px, -2.2em);
 	}
 
-
-	15% {
-		transform:translate(250px, -2.2em);
-	}
-
-	20% {
-		transform:translate(250px, -1.5em);
+	5% {
+		transform:translate(265px, -1.5em);
 
 	}
 
 	100%{
-		transform:translate(250px, -1.5em);
+		transform:translate(265px, -1.5em);
 
 	}
 }
 /*geel post-it*/
-section:first-of-type div {
+section:nth-of-type(2) div {
 	content: "";
 	position: absolute;
 	height: 4em;
 	width: 9em;
-	left: 0.17em;
+	left: calc(50% - 4.0em);
 	background-color: #FFCE00;
 	display: inline-block;
-	animation: postit-animation 5s ease-out;
+	animation: postit-animation 8s ease-out infinite;
+	animation-delay: 2.5s;
+	transform: translateX(-200em);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
+							0 2px 2px rgba(0, 0, 0, 0.20),
+							0 4px 4px rgba(0, 0, 0, 0.15),
+							0 8px 8px rgba(0, 0, 0, 0.10),
+							0 16px 16px rgba(0, 0, 0, 0.05);
 }
 
-section:first-of-type div{
+section:nth-of-type(2) div{
   animation-play-state:running;
-	animation-delay: 2s;
 	opacity: 1;
+	transform-origin: center top;
 
 }
 
 @keyframes postit-animation {
 	0% {
 		transform:translateX(-50em);
-
 	}
 
-  20% {
-		transform:translateX(9.4em);
-
+  7% {
+		transform:translateX(0);
 	}
 
+	10% {
+		transform:rotate(10deg);
+	}
+
+	15% {
+		transform:rotate(-10deg);
+	}
+
+	17% {
+		transform:rotate(0);
+	}
 
 	100%{
-		transform:translateX(9.4em);
+		transform:translateX(0);
 
+	}
+}
+
+/*Handwriting*/
+div {
+	display: inline-block;
+	position: relative;
+}
+
+svg {
+	width: 8em;
+	margin-top: 1em;
+}
+
+path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: pinterest-line 8s linear infinite;
+	animation-delay: 3s;
+}
+
+@keyframes pinterest-line {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  40%{
+    stroke-dashoffset: 1000;
+  }
+
+	100%v{
+		stroke-dashoffset: 1000;
 	}
 }
