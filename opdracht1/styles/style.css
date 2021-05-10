@@ -32,55 +32,45 @@ body {
   background-color: var(--kleurBackground);
 }
 
-@media (prefer-color-scheme: dark) {
+:root {
+	--geelLetterO:#F5F09E;
+	--geelLetterODark:#E5E097;
+	--roodLetterG:#F39EB6;
+	--roodLetterGDark:#E093AC;
+	--groenLetterE:#B2D59F;
+	--groenLetterEDark:#A3C191;
+	--blauwLetterL:#B1DDE6;
+	--blauwLetterLDark:#A8CCD1;
+	--kleurBackground:white;
+
+	--mainColor: #F47F9B;
+	--eersteSpanColor: #CCCCCC;
+	--pinBefore: #F29CA4;
+	--pinAfter: #E28890;
+	--postIt: #F2D577;
+
+}
+
+@media (prefers-color-scheme: dark) {
 	:root {
-		-- kleurLetterO: #F9B233;
-		-- kleurLetterODark:#DB9F42;
-		-- kleurLetterG: red;
-		-- kleurLetterGDark: maroon;
-		-- kleurLetterE: #4CB741;
-		-- kleurLetterEDark: #3D9E33;
-		-- kleurLetterL: #3297D4;
-		-- kleurLetterLDark: #2E84B8;
-		-- kleurBackground: white;
+		--geelLetterO:#F9B233;
+		--geelLetterODark:#DB9F42;
+		--roodLetterG:red;
+		--roodLetterGDark:maroon;
+		--groenLetterE:#4CB741;
+		--groenLetterEDark:#3D9E33;
+		--blauwLetterL:#3297D4;
+		--blauwLetterLDark:#2E84B8;
+		--kleurBackground:black;
+
+		--mainColor: red;
+		--eersteSpanColor: grey;
+		--pinBefore: #DB1625;
+		--pinAfter: #F41929;
+		--postIt: #FFCE00;
 	}
 }
 
-@media (prefer-color-scheme:light) {
-	:root {
-		-- kleurLetterO: #F5F09E;
-		-- kleurLetterODark:#E5E097;
-		-- kleurLetterG: #F39EB6;
-		-- kleurLetterGDark: #E093AC;
-		-- kleurLetterE: #B2D59F;
-		-- kleurLetterEDark: #A3C191;
-		-- kleurLetterL: #B1DDE6;
-		-- kleurLetterLDark: #A8CCD1;
-		-- kleurBackground: black;
-	}
-}
-
-@media (prefer-color-scheme:dark) {
-	:root {
-		-- mainColor: red;
-		-- eersteSpanColor: grey;
-		-- pinBefore: #DB1625;
-		-- pinAfter: #F41929;
-		-- postIt: #FFCE00;
-
-	}
-}
-
-@media (prefer-color-scheme:light) {
-	:root {
-		-- mainColor: #F47F9B;
-		-- eersteSpanColor: #CCCCCC;
-		-- pinBefore: #F29CA4;
-		-- pinAfter: #E28890;
-		-- postIt: #F2D577;
-
-	}
-}
 
 
 /* BRAND STYLING */
@@ -135,9 +125,9 @@ section {
 
 /*The bovenste twee punten aan het lego blokje*/
 background-image:
-	linear-gradient(transparent .5em, var(-- kleurLetterO) .5em 2em),
-	linear-gradient(to right, var(-- kleurLetterODark), var(-- kleurLetterO) 33%, var(-- kleurLetterODark)),
-	linear-gradient(to right, var(-- kleurLetterODark), var(-- kleurLetterO) 33%, var(-- kleurLetterODark));
+	linear-gradient(transparent .5em, var(--geelLetterO) .5em 2em),
+	linear-gradient(to right, var(--geelLetterODark), var(--geelLetterO) 33%, var(--geelLetterODark)),
+	linear-gradient(to right, var(--geelLetterODark), var(--geelLetterO) 33%, var(--geelLetterODark));
 
 background-size:100% 5em, 0.75em .5em, 0.75em .5em, 0.75em .5em;
 background-repeat:no-repeat;
@@ -190,10 +180,10 @@ background-position:top center, top left, top right;
 
 
 background-image:
-	linear-gradient(transparent .5em, red .5em 2em),
-	linear-gradient(to right, var(--kleurLetterGDark), var(--kleurLetterG) 33%, var(--kleurLetterGDark)),
-	linear-gradient(to right, var(--kleurLetterGDark), var(--kleurLetterG) 33%, var(--kleurLetterGDark)),
-	linear-gradient(to right, var(--kleurLetterGDark), var(--kleurLetterG) 33%, var(--kleurLetterGDark));
+	linear-gradient(transparent .5em, var(--roodLetterG) .5em 2em),
+	linear-gradient(to right, var(--roodLetterGDark), var(--roodLetterG) 33%, var(--roodLetterGDark)),
+	linear-gradient(to right, var(--roodLetterGDark), var(--roodLetterG) 33%, var(--roodLetterGDark)),
+	linear-gradient(to right, var(--roodLetterGDark), var(--roodLetterG) 33%, var(--roodLetterGDark));
 
 background-size:100% 5em, 0.75em .5em, 0.75em .5em, 0.75em .5em;
 background-repeat:no-repeat;
@@ -241,10 +231,10 @@ background-position:top center, top left, top center, top right;
 	opacity: 0;
 
 background-image:
-	linear-gradient(transparent .5em, #4CB741 .5em 2em),
-	linear-gradient(to right, var(--kleurLetterEDark), var(--kleurLetterE) 33%, var(--kleurLetterEDark)),
-	linear-gradient(to right, var(--kleurLetterEDark), var(--kleurLetterE) 33%, var(--kleurLetterEDark)),
-	linear-gradient(to right, var(--kleurLetterEDark), var(--kleurLetterE) 33%, var(--kleurLetterEDark));
+	linear-gradient(transparent .5em, var(--groenLetterE) .5em 2em),
+	linear-gradient(to right, var(--groenLetterEDark), var(--groenLetterE) 33%, var(--groenLetterEDark)),
+	linear-gradient(to right, var(--groenLetterEDark), var(--groenLetterE) 33%, var(--groenLetterEDark)),
+	linear-gradient(to right, var(--groenLetterEDark), var(--groenLetterE) 33%, var(--groenLetterEDark));
 
 background-size:100% 5em, 0.75em .5em, 0.75em .5em, 0.75em .5em;
 background-repeat:no-repeat;
@@ -292,9 +282,9 @@ background-position:top center, top left, top center, top right;
 
 
 background-image:
-	linear-gradient(transparent .5em, var(--kleurLetterL).5em 2em),
-	linear-gradient(to right, var(--kleurLetterLDark), var(--kleurLetterL) 33%, var(--kleurLetterLDark)),
-	linear-gradient(to right, var(--kleurLetterLDark), var(--kleurLetterL) 33%, var(--kleurLetterLDark));
+	linear-gradient(transparent .5em, var(--blauwLetterL).5em 2em),
+	linear-gradient(to right, var(--blauwLetterLDark), var(--blauwLetterL) 33%, var(--blauwLetterLDark)),
+	linear-gradient(to right, var(--blauwLetterLDark), var(--blauwLetterL) 33%, var(--blauwLetterLDark));
 
 background-size:100% 5em, 0.75em .5em, 0.75em .5em, 0.75em .5em;
 background-repeat:no-repeat;
@@ -444,7 +434,8 @@ background-position:top center, top left, top right;
 
 	}
 }
-/*geel post-it*/
+
+/*gele post-it*/
 section:nth-of-type(2) div {
 	content: "";
 	position: absolute;
@@ -527,4 +518,14 @@ path {
 	100%v{
 		stroke-dashoffset: 1000;
 	}
+}
+
+/*De kleur van de stoke, moet hetzelfde zijn als de post-it*/
+svg path {
+	stroke: var(--postIt);
+}
+
+/*Handwriting kleur*/
+svg g path {
+	fill: var(--mainColor);
 }
