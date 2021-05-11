@@ -66,13 +66,13 @@ Mijn plan was dat ik voor maandag het grootste gedeelte van de animatie af heb e
 Het werk dat ik heb geleverd zijn de twee animaties van Pinterest en Lego. De animaties zijn responsive, voor dark/light mode en ik maak gebruik van verschillende custom properties. Ik ben zeer trots op het resultaat dat ik geleverd heb, omdat ik weet dat coderen niet het aller makkelijkste voor mij is. Ik heb dit vak gekozen om beter te worden in coderen en voldoende uitdaging te krijgen.
 
 - <b>Wat er goed ging</b>
-Wat ik goed vond gaan tijdens het maken van de animaties was het vaak zelf proberen op te lossen van problemen, als ik er niet uit kwam heb ik contact gezocht met klasgenoten en Sam. Beide konden mij vaak tips geven, waardoor ik weer verder kwam in mijn proces.Ook liep ik snel vast bij het maken van het logo blokje, maar zag ik via Teams dat nog niemand een lego blokje had en dat Sanne een blokje heeft nagemaakt. Dit heb ik vervolgens bekeken om te kijken hoe het in elkaar zat. Na een speurtocht hoe het werkte heb ik deze ook gebruikt voor mijn eigen lego blokje. 
+Wat ik goed vond gaan tijdens het maken van de animaties was het vaak zelf proberen op te lossen van problemen, als ik er niet uit kwam heb ik contact gezocht met klasgenoten en Sam. Beide konden mij vaak tips geven, waardoor ik weer verder kwam in mijn proces.Ook liep ik snel vast bij het maken van het logo blokje, maar zag ik via Teams dat nog niemand een lego blokje had en dat Sanne een blokje heeft nagemaakt. Dit heb ik vervolgens bekeken om te kijken hoe het in elkaar zat. Na een speurtocht hoe het werkte heb ik deze ook gebruikt voor mijn eigen lego blokje.
 
 - <b>Wat er lastig is</b>
 Waar ik tijdens het maken van de animaties tegen aan liep was het maken van het pinnetje van Pinterest. Ik kwam er al snel achter dat ik maar 1 before en after had. Samen met Sam heb ik het besproken en Sam had als idee om het onderstukje van de P te gebruiken als het grijze pinnetje. Dit was een zeer goed is. Ten tweede liep ik vast bij het maken van het handwriting op de gele post-it. Tot slot had ik nog wat kleine probleempjes met de root van de dark/light mode.
 
-![screenshot](images/screenshot1.png)
-![screenshot](images/screenshot2.png)
+![screenshot](../images/screenshot1.png)
+![screenshot](../images/screenshot2.png)
 
 - <b>Wat je plannen zijn</b>
 Ik ben benieuwd wat voor feedback ik zal ontvangen en hoop dat ik hierdoor nog beter kan worden.
