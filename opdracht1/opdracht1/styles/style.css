@@ -1,0 +1,531 @@
+/* CSS Document */
+
+/* FONTS */
+@font-face {
+	font-family: 'legothictype';
+	src: url('../fonts/legothick-webfont.woff2') format('woff2'),
+			 url('../fonts/legothick-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'danubia_scriptregular';
+    src: url('../fonts/danubiascript-webfont.woff2') format('woff2'),
+         url('../fonts/danubiascript-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+/* ALGEMENE STYLING */
+*, *::after, *::before {
+  box-sizing:border-box;
+}
+
+body {
+  font-family: eenfont, sans-serif;
+  color:#111;
+  background-color: var(--kleurBackground);
+}
+
+:root {
+	--geelLetterO:#F5F09E;
+	--geelLetterODark:#E5E097;
+	--roodLetterG:#F39EB6;
+	--roodLetterGDark:#E093AC;
+	--groenLetterE:#B2D59F;
+	--groenLetterEDark:#A3C191;
+	--blauwLetterL:#B1DDE6;
+	--blauwLetterLDark:#A8CCD1;
+	--kleurBackground:white;
+
+	--mainColor: #F47F9B;
+	--eersteSpanColor: #CCCCCC;
+	--pinBefore: #F29CA4;
+	--pinAfter: #E28890;
+	--postIt: #F2D577;
+
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--geelLetterO:#F9B233;
+		--geelLetterODark:#DB9F42;
+		--roodLetterG:red;
+		--roodLetterGDark:maroon;
+		--groenLetterE:#4CB741;
+		--groenLetterEDark:#3D9E33;
+		--blauwLetterL:#3297D4;
+		--blauwLetterLDark:#2E84B8;
+		--kleurBackground:black;
+
+		--mainColor: red;
+		--eersteSpanColor: grey;
+		--pinBefore: #DB1625;
+		--pinAfter: #F41929;
+		--postIt: #FFCE00;
+	}
+}
+
+
+
+/* BRAND STYLING */
+
+
+
+/*Letters stijlen*/
+
+section {
+	text-align: center;
+}
+
+.pinterest {
+	font-family: 'danubia_scriptregular';
+	color: var(--mainColor);
+	letter-spacing: -7px;
+	position: relative;
+	top:350px;
+	font-size: min(10vw, 4em);
+
+}
+
+.lego {
+	font-family: 'legothictype';
+	position: relative;
+	top: 225px;
+	font-size: min(10vw, 5em);
+}
+
+
+/*Lego*/
+
+.lego h1 {
+	display: inline-block;
+	position: relative;
+}
+
+.lego span {
+	color: black;
+}
+
+/*De letter O in Lego*/
+.lego span:first-of-type {
+	position:absolute;
+	margin: auto 0;
+	width:2em;
+	height:1.5em;
+	font-size: 0.5em;
+	padding-top: 0.55em;
+	animation: letterO 15s ease-in infinite;
+	transform-origin: right bottom;
+
+/*The bovenste twee punten aan het lego blokje*/
+background-image:
+	linear-gradient(transparent .5em, var(--geelLetterO) .5em 2em),
+	linear-gradient(to right, var(--geelLetterODark), var(--geelLetterO) 33%, var(--geelLetterODark)),
+	linear-gradient(to right, var(--geelLetterODark), var(--geelLetterO) 33%, var(--geelLetterODark));
+
+background-size:100% 5em, 0.75em .5em, 0.75em .5em, 0.75em .5em;
+background-repeat:no-repeat;
+background-position:top center, top left, top right;
+}
+
+
+/*Animatie van de letter O*/
+@keyframes letterO {
+	0% {
+		transform: translate(-25em,-50em);
+	}
+
+	20% {
+		transform: translate(0, 0);
+	}
+
+	25% {
+		transform-origin: 100% 20%;
+		transform: translate(1em, -2em) rotate(45deg);
+	}
+
+	28% {
+		transform: translate(0, 0);
+	}
+
+
+	100% {
+		transform: translate(0, 0);
+	}
+
+}
+
+
+
+
+
+
+/*De letter G in Lego*/
+
+.lego span:nth-of-type(2) {
+	position:absolute;
+	margin: auto 0;
+	width:4em;
+	height:1.5em;
+	font-size: 0.5em;
+	padding-top: 0.55em;
+	animation: letterG 15s ease-in infinite;
+	opacity: 0;
+
+
+background-image:
+	linear-gradient(transparent .5em, var(--roodLetterG) .5em 2em),
+	linear-gradient(to right, var(--roodLetterGDark), var(--roodLetterG) 33%, var(--roodLetterGDark)),
+	linear-gradient(to right, var(--roodLetterGDark), var(--roodLetterG) 33%, var(--roodLetterGDark)),
+	linear-gradient(to right, var(--roodLetterGDark), var(--roodLetterG) 33%, var(--roodLetterGDark));
+
+background-size:100% 5em, 0.75em .5em, 0.75em .5em, 0.75em .5em;
+background-repeat:no-repeat;
+background-position:top center, top left, top center, top right;
+}
+
+
+/*Animatie van de letter G*/
+@keyframes letterG {
+	0% {
+		transform: translate(-25em,-50em) rotate(-180deg);
+		opacity: 100;
+	}
+
+	35% {
+		transform: translate(-1em, -1em);
+		opacity: 100;
+	}
+
+
+
+	100% {
+		transform: translate(-1em, -1em);
+		opacity: 100;
+	}
+
+}
+
+
+
+
+
+
+
+
+/*De letter E in Lego*/
+.lego span:nth-of-type(3) {
+	position:absolute;
+	margin: auto 0;
+	width:4em;
+	height:1.5em;
+	font-size: 0.5em;
+	padding-top: 0.55em;
+	animation: letterE 15s ease-in infinite;
+	opacity: 0;
+
+background-image:
+	linear-gradient(transparent .5em, var(--groenLetterE) .5em 2em),
+	linear-gradient(to right, var(--groenLetterEDark), var(--groenLetterE) 33%, var(--groenLetterEDark)),
+	linear-gradient(to right, var(--groenLetterEDark), var(--groenLetterE) 33%, var(--groenLetterEDark)),
+	linear-gradient(to right, var(--groenLetterEDark), var(--groenLetterE) 33%, var(--groenLetterEDark));
+
+background-size:100% 5em, 0.75em .5em, 0.75em .5em, 0.75em .5em;
+background-repeat:no-repeat;
+background-position:top center, top left, top center, top right;
+}
+
+/*Animatie van de letter E*/
+@keyframes letterE {
+	0% {
+		transform: translate(-25em,-50em) rotate(-180deg);
+		opacity: 100;
+	}
+
+	35% {
+		transform: translate(-5em,-20em) rotate(1turn);
+	}
+
+	55% {
+		transform: translate(-2.5em, -2em);
+		opacity: 100;
+	}
+
+
+
+	100% {
+		transform: translate(-2.5em, -2em);
+		opacity: 100;
+	}
+
+}
+
+
+
+/*De letter L in Lego*/
+
+.lego span:nth-of-type(4){
+	position:absolute;
+	margin: auto 0;
+	width:2em;
+	height:1.5em;
+	font-size: 0.5em;
+	padding-top: 0.55em;
+	animation: letterL 15s ease-in infinite;
+	opacity: 0;
+
+
+background-image:
+	linear-gradient(transparent .5em, var(--blauwLetterL).5em 2em),
+	linear-gradient(to right, var(--blauwLetterLDark), var(--blauwLetterL) 33%, var(--blauwLetterLDark)),
+	linear-gradient(to right, var(--blauwLetterLDark), var(--blauwLetterL) 33%, var(--blauwLetterLDark));
+
+background-size:100% 5em, 0.75em .5em, 0.75em .5em, 0.75em .5em;
+background-repeat:no-repeat;
+background-position:top center, top left, top right;
+}
+
+/*Animatie van de letter L*/
+@keyframes letterL {
+	0% {
+		transform: translate(0,-50em) rotate(45deg);
+		opacity: 100;
+	}
+
+	42% {
+		transform: translate(0, -3em) rotate(45deg);
+		opacity: 100;
+	}
+
+	52% {
+		transform: translate(-80em,-50em) rotate(45deg);
+		opacity: 100;
+	}
+
+	60% {
+		transform: translate(-1em,-50em) ;
+		opacity: 100;
+	}
+
+	70% {
+		transform: translate(0.75em,-3em) ;
+		opacity: 100;
+	}
+
+	100% {
+		transform: translate(0.75em, -3em);
+		opacity: 100;
+	}
+
+}
+
+
+
+
+
+
+
+
+/*Pinterest*/
+
+.pinterest h1 {
+	display: inline-block;
+	position: relative;
+
+}
+
+.pinterest span:nth-of-type(1) {
+	position: relative;
+	transform-origin: center bottom;
+	margin: auto 0;
+}
+
+/*Wanneer erover Pinterest heen gehovert wordt, krijgt de eerste span een grijze kleur en animatie start */
+.pinterest span:nth-of-type(1) {
+	color: var(--eersteSpanColor);
+	animation: pinafter-animation 8s ease-out infinite;
+	display: inline-block;
+	z-index: 10;
+
+
+}
+
+.pinterest span:nth-of-type(1)::after {
+	content: "";
+	position: absolute;
+	height: 0.65em;
+	width: 0.75em;
+	background-color: var(--pinAfter);
+	border-radius: 50%;
+	left: 0.15em;
+	z-index: 10;
+}
+
+
+.pinterest span:nth-of-type(1)::before {
+	content: "";
+	position: absolute;
+	height: 0.61em;
+	width: 0.54em;
+	top: 0.28em;
+	border-radius: 4em / 8em;
+	background-color: var(--pinBefore);
+	left: 0.15em;
+	transform: rotate(285deg);
+	z-index: 10;
+}
+
+.pinterest span:first-of-type::after,
+.pinterest span:first-of-type::before,
+.pinterest span:first-of-type{
+  animation-play-state:running;
+	animation-delay: 2.6s;
+	z-index: 10;
+
+}
+
+
+@keyframes pinbefore-animation {
+	0% {
+		transform:translateY(0) rotate(285deg);
+	}
+
+	15% {
+	  transform:translateY(-0.75em) rotate(285deg);
+		right: 5em;
+	}
+
+	50%{
+		transform:translateY(-1em)  rotate(285deg);
+	}
+
+	75% {
+		transform:translateY(-1.25em) rotate(285deg);
+	}
+
+	100%{
+		transform:translateY(-1.5em) rotate(285deg)
+	}
+}
+
+@keyframes pinafter-animation {
+	0% {
+		transform:translateY(0);
+	}
+
+
+	4% {
+		transform:translate(265px, -2.2em);
+	}
+
+	5% {
+		transform:translate(265px, -1.5em);
+
+	}
+
+	100%{
+		transform:translate(265px, -1.5em);
+
+	}
+}
+
+/*gele post-it*/
+section:nth-of-type(2) div {
+	content: "";
+	position: absolute;
+	height: 4em;
+	width: 9em;
+	left: calc(50% - 4.0em);
+	background-color: var(--postIt);
+	display: inline-block;
+	animation: postit-animation 8s ease-out infinite;
+	animation-delay: 2.5s;
+	transform: translateX(-200em);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
+							0 2px 2px rgba(0, 0, 0, 0.20),
+							0 4px 4px rgba(0, 0, 0, 0.15),
+							0 8px 8px rgba(0, 0, 0, 0.10),
+							0 16px 16px rgba(0, 0, 0, 0.05);
+}
+
+section:nth-of-type(2) div{
+  animation-play-state:running;
+	opacity: 1;
+	transform-origin: center top;
+
+}
+
+@keyframes postit-animation {
+	0% {
+		transform:translateX(-50em);
+	}
+
+  7% {
+		transform:translateX(0);
+	}
+
+	10% {
+		transform:rotate(10deg);
+	}
+
+	15% {
+		transform:rotate(-10deg);
+	}
+
+	17% {
+		transform:rotate(0);
+	}
+
+	100%{
+		transform:translateX(0);
+
+	}
+}
+
+/*Handwriting*/
+div {
+	display: inline-block;
+	position: relative;
+}
+
+svg {
+	width: 8em;
+	margin-top: 1em;
+}
+
+path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: pinterest-line 8s linear infinite;
+	animation-delay: 3s;
+}
+
+@keyframes pinterest-line {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  40%{
+    stroke-dashoffset: 1000;
+  }
+
+	100%v{
+		stroke-dashoffset: 1000;
+	}
+}
+
+/*De kleur van de stoke, moet hetzelfde zijn als de post-it*/
+svg path {
+	stroke: var(--postIt);
+}
+
+/*Handwriting kleur*/
+svg g path {
+	fill: var(--mainColor);
+}
