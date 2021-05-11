@@ -79,3 +79,5 @@ Ik ben benieuwd wat voor feedback ik zal ontvangen en hoop dat ik hierdoor nog b
 1. https://css-tricks.com/almanac/properties/s/stroke-dashoffset/
 2. https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
 3. https://css-tricks.com/how-to-get-handwriting-animation-with-irregular-svg-strokes/
+4. https://codepen.io/suzeentjes/pen/rNjbPxQ
+5. https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
