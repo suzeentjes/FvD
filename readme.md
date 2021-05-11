@@ -71,6 +71,8 @@ Wat ik goed vond gaan tijdens het maken van de animaties was het vaak zelf probe
 - <b>Wat er lastig is</b>
 Waar ik tijdens het maken van de animaties tegen aan liep was het maken van het pinnetje van Pinterest. Ik kwam er al snel achter dat ik maar 1 before en after had. Samen met Sam heb ik het besproken en Sam had als idee om het onderstukje van de P te gebruiken als het grijze pinnetje. Dit was een zeer goed is. Ten tweede liep ik vast bij het maken van het handwriting op de gele post-it. Tot slot had ik nog wat kleine probleempjes met de root van de dark/light mode.
 
+<img width="106" alt="screenshot1" src="https://user-images.githubusercontent.com/70519367/117785307-bdfe1e00-b244-11eb-958d-c0fad16e1544.png">
+<img width="544" alt="screenshot2" src="https://user-images.githubusercontent.com/70519367/117785309-be96b480-b244-11eb-9f4f-958557503d65.png">
 
 - <b>Wat je plannen zijn</b>
 Ik ben benieuwd wat voor feedback ik zal ontvangen en hoop dat ik hierdoor nog beter kan worden.
