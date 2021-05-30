@@ -84,3 +84,19 @@ Ik ben benieuwd wat voor feedback ik zal ontvangen en hoop dat ik hierdoor nog b
 3. https://css-tricks.com/how-to-get-handwriting-animation-with-irregular-svg-strokes/
 4. https://codepen.io/suzeentjes/pen/rNjbPxQ
 5. https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
+
+## Week 7
+- <b>Wat je van plan was</b>
+Deze week was ik van plan om mijn break-down schetsen te maken en te bespreken met Sanne.Ook ben ik begonnen met de eerste HTML-code te schrijven.
+
+- <b>Je werk zo ver</b>
+Deze week heb ik mijn eerste HTML-code geschreven en mijn break-down schetsen gemaakt.  
+
+- <b>Wat er goed ging</b>
+Het maken van mijn break-down schetsen ging goed. Dit heb ik tijdens het voortgangsgesprek besproken. Daaruit bleek dat ik fieldsets beter kon gebruiken bij bepaalde elementen. Ook heb ik geleerd hoe ik een gekleurde checkbox kan maken. 
+
+- <b>Wat er lastig is</b>
+Ik liep al snel tegen het probleem aan dat ik niet wist hoe ik de gekleurde bolletjes moest gaan maken, zodat de mensen konden filteren op bepaalde kleuren foto's. 
+
+- <b>Wat je plannen zijn</b>
+Mijn plannen voor de komende weken zijn om de te beginnen met de header. Het maken van de zoekbalk. 
