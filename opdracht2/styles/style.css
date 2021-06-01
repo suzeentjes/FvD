@@ -1,27 +1,214 @@
 /* CSS Document */
 
 /* FONTS */
-@font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
 
-}
 
 
 /* ALGEMENE STYLING */
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box;
 }
 
 body {
   font-family:eenfont, sans-serif;
   color:#111;
-  background-color:#eee;
+  background-color:#FFFFFF;
 }
 
 
 /* BRAND STYLING */
 
+header section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 2em 1em;
+}
+
+header section > img{
+	width: min(20vw, 10em);
+}
+
+header section input{
+	width: min(35vw, 30em);
+	height: min(10vw, 2.5em);
+	background-color: #eee;
+	border: 0.25em solid #eee;
+	border-radius: 0.5em;
+	padding-left: 1em;
+}
+
+header section a img{
+	width: min(6vw, 2em);
+}
+
+/*Filter kleur opties | fieldset 1*/
+fieldset {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	text-align: center;
+	width: min(90vw, 36em);
+	border: none;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+
+fieldset:first-of-type label {
+	position:relative;
+	width:2em; height:2em;
+	border-radius: 50%;
+	overflow:hidden;
+	margin-right: 0.75em;
+	padding-left: 2em;
+
+}
+
+fieldset:first-of-type input:nth-of-type(1) + label {
+	background-color:red;
+}
+
+fieldset:first-of-type input:nth-of-type(2) + label {
+	background-color:purple;
+}
+
+fieldset:first-of-type input:nth-of-type(3) + label {
+	background-color:blue;
+}
+
+fieldset:first-of-type input:nth-of-type(4) + label {
+	background-color:green;
+}
+
+fieldset:first-of-type input:nth-of-type(5) + label {
+	background-color:yellow;
+}
+
+fieldset:first-of-type input:nth-of-type(6) + label {
+	background-color:orange;
+}
+
+fieldset:first-of-type input:nth-of-type(7) + label {
+	background: rgb(255,255,255);
+  background: linear-gradient(240deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(0,0,0,1) 49%, rgba(0,0,0,1) 97%);
+	border: 0.02em solid grey;
+}
+
+fieldset:first-of-type input:nth-of-type(8) + label {
+	background: rgb(255,98,52);
+  background: linear-gradient(270deg, rgba(255,98,52,1) 0%, rgba(250,195,50,1) 10%, rgba(159,252,52,1) 28%, rgba(55,255,166,1) 40%, rgba(59,223,252,1) 51%, rgba(49,142,250,1) 59%, rgba(39,45,246,1) 67%, rgba(177,46,255,1) 74%, rgba(238,5,255,1) 82%, rgba(255,41,108,1) 96%);
+}
+
+fieldset:nth-of-type(1) input:focus + label,
+fieldset:nth-of-type(1) label:hover {
+	box-shadow: 0 0 0 .25em grey;
+}
+
+fieldset:nth-of-type(1) input:checked + label::after {
+	content:"";
+	display:inline-block;
+	width:2em;
+	height:.75em;
+	border-style:solid;
+	border-width:0 0 2px 4px;
+	border-color:lightgrey;
+	transform:rotate(-45deg) skew(-15deg, -15deg);
+	position:absolute;
+	left:0; top:0em;
+}
+
+	/*Filter buttons linker | fieldset 2 */
+	fieldset:nth-of-type(2) button {
+		background-color: #eee;
+		border: 0.15em solid #eee;
+		padding: 1.5em 2em;
+		border-radius: 0.5em;
+		margin-right: 0.5em;
+		font-weight: 400;
+
+	}
+
+	fieldset:nth-of-type(2) button:nth-of-type(1) {
+	background-image: url('../images/filter.svg') ;
+	background-size: 1.5em;
+	background-repeat: no-repeat;
+  align-items: center;
+
+	}
+
+	fieldset:nth-of-type(2) button:nth-of-type(2) {
+    background-image: url('../images/sort.svg') ;
+  	background-size: 1.5em;
+  	background-repeat: no-repeat;
+    align-items: center;
+
+	}
+
+
+
+	/*Filter buttons rechter | fieldset 2 */
+
+  fieldset:nth-of-type(2) label {
+  	display: inline-block;
+  	width:3em; height:3em;
+  	border: 0.05em solid grey;
+  	overflow:hidden;
+  	margin-left: 0.75em;
+    padding-left: 2.88em;
+
+  }
+
+  fieldset:nth-of-type(2) input:nth-of-type(1) + label:nth-of-type(1) {
+    background-image: url('../images/grootte-foto-grijs.svg');
+    background-repeat: no-repeat;
+  }
+
+  fieldset:nth-of-type(2) input:nth-of-type(2) + label:nth-of-type(2) {
+    background-image: url('../images/kleine-foto-grijs.svg');
+    background-repeat: no-repeat;
+  }
+
+  fieldset:nth-of-type(2) input:focus + label,
+  fieldset:nth-of-type(2) label:hover {
+  	box-shadow: 0 0 0 .25em grey;
+  }
+
+  fieldset:nth-of-type(2) input:checked + label::after {
+    background-image: url('../images/grootte-foto-zwart.svg');
+    background-size: 1.5em;
+  }
+
+
+
+
+
+  /*Afbeeldingen main*/
+
+  ul {
+    margin: 2em 0 0 0;
+  }
+
+  ul li img {
+    width: 25em;
+    height: 22em;
+  }
+
+  ul li:nth-of-type(1) img {
+    background-image: url('../images/maldive.jpg');
+    background-repeat: no-repeat;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
