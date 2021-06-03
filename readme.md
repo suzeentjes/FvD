@@ -101,3 +101,25 @@ Ik liep al snel tegen het probleem aan dat ik niet wist hoe ik de gekleurde boll
 
 - <b>Wat je plannen zijn</b>
 Mijn plannen voor de komende weken zijn om de te beginnen met de header. Het maken van de zoekbalk. 
+
+
+## Week 8
+- <b>Wat je van plan was</b>
+Deze was ik van plan om verder te gaan met mijn ontwerp. Vorige week heb ik gesproken met Sanne over verschillende elementen in mijn html die iets anders konden. Deze heb ik dan ook direct veranderd. Deze week wilde ik de header maken met zoekfunctie en kleurenfilter. 
+
+
+- <b>Je werk zo ver</b>
+Deze week ben ik begonnen met de header netjes in HTML te maken. 
+<img width="571" alt="Schermafbeelding 2021-05-30 om 16 50 55" src="https://user-images.githubusercontent.com/70519367/120619581-65452e00-c45c-11eb-99d8-6fe483d94824.png">
+Vervolgens ben ik verder gegaan met de zoekfunctie, button en filteroptie. 
+<img width="405" alt="Schermafbeelding 2021-05-30 om 20 14 54" src="https://user-images.githubusercontent.com/70519367/120620033-db499500-c45c-11eb-95f1-00c6e2b8e9a4.png">
+
+- <b>Wat er goed ging</b>
+Het maken van mijn break-down schetsen ging goed. Dit heb ik tijdens het voortgangsgesprek besproken. Daaruit bleek dat ik fieldsets beter kon gebruiken bij bepaalde elementen. Ook heb ik geleerd hoe ik een gekleurde checkbox kan maken. 
+![FvD opdracht 2-1](https://user-images.githubusercontent.com/70519367/120104025-c2866a00-c152-11eb-9414-0bb157a8c79d.png)
+
+- <b>Wat er lastig is</b>
+Ik liep al snel tegen het probleem aan dat ik niet wist hoe ik de gekleurde bolletjes moest gaan maken, zodat de mensen konden filteren op bepaalde kleuren foto's. 
+
+- <b>Wat je plannen zijn</b>
+Mijn plannen voor de komende weken zijn om de te beginnen met de header. Het maken van de zoekbalk. 
