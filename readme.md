@@ -116,7 +116,7 @@ Vervolgens ben ik verder gegaan met de zoekfunctie, button en filteroptie.
 
 - <b>Wat er goed ging</b>
 Het maken van mijn break-down schetsen ging goed. Dit heb ik tijdens het voortgangsgesprek besproken. Daaruit bleek dat ik fieldsets beter kon gebruiken bij bepaalde elementen. Ook heb ik geleerd hoe ik een gekleurde checkbox kan maken. 
-![FvD opdracht 2-1](https://user-images.githubusercontent.com/70519367/120104025-c2866a00-c152-11eb-9414-0bb157a8c79d.png)
+
 
 - <b>Wat er lastig is</b>
 Ik liep al snel tegen het probleem aan dat ik niet wist hoe ik de gekleurde bolletjes moest gaan maken, zodat de mensen konden filteren op bepaalde kleuren foto's. 
