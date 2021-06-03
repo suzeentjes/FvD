@@ -112,6 +112,7 @@ Deze was ik van plan om verder te gaan met mijn ontwerp. Vorige week heb ik gesp
 Deze week ben ik begonnen met de header netjes in HTML te maken. 
 <img width="571" alt="Schermafbeelding 2021-05-30 om 16 50 55" src="https://user-images.githubusercontent.com/70519367/120619581-65452e00-c45c-11eb-99d8-6fe483d94824.png">
 Vervolgens ben ik verder gegaan met de zoekfunctie, button en filteroptie. 
+
 <img width="405" alt="Schermafbeelding 2021-05-30 om 20 14 54" src="https://user-images.githubusercontent.com/70519367/120620033-db499500-c45c-11eb-95f1-00c6e2b8e9a4.png">
 
 - <b>Wat er goed ging</b>
