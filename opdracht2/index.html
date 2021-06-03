@@ -16,7 +16,7 @@
 	<header>
 		<section>
 			<img src="images/pixela.png" alt="logo pixela">
-			<input type="search" placeholder="Zoeken..">
+			<input type="search" placeholder="Zoeken.." class="search" >
 			<a href="#"><img src="./images/heart-2.svg" alt=""></a>
 
 		</section>
@@ -24,51 +24,69 @@
 	</header>
 
 	<main>
-		<section>
+
 		 <form class="" action="index.html" method="post">
-		 	<fieldset>
-					<input type="checkbox" id="rood" class="visually-hidden">
+		 	<fieldset class="checkboxen">
+					<input type="checkbox" id="rood" class="visually-hidden rood">
 					<label for="rood">Rood</label>
-					<input type="checkbox" id="paars" class="visually-hidden">
+					<input type="checkbox" id="paars" class="visually-hidden paars">
 					<label for="paars">Paars</label>
-					<input type="checkbox" id="blauw" class="visually-hidden">
+					<input type="checkbox" id="blauw" class="visually-hidden blauw">
 					<label for="blauw">Blauw</label>
-					<input type="checkbox" id="groen" class="visually-hidden">
+					<input type="checkbox" id="groen" class="visually-hidden groen">
 					<label for="groen">Groen</label>
-					<input type="checkbox" id="geel" class="visually-hidden">
+					<input type="checkbox" id="geel" class="visually-hidden geel">
 					<label for="geel">Geel</label>
-					<input type="checkbox" id="oranje" class="visually-hidden">
+					<input type="checkbox" id="oranje" class="visually-hidden oranje">
 					<label for="oranje">Oranje</label>
-					<input type="checkbox" id="zwartwit" class="visually-hidden">
+					<input type="checkbox" id="zwartwit" class="visually-hidden zwartwit">
 					<label for="zwartwit">Zwart/Wit</label>
-					<input type="checkbox" id="gekleurd" class="visually-hidden">
+					<input type="checkbox" id="gekleurd" class="visually-hidden gekleurd">
 					<label for="gekleurd">Gekleurd</label>
 		 	</fieldset>
 			<fieldset>
-				<button type="button" name="button">Filter</button>
-				<button type="button" name="button">Sorteren</button>
 
-				<input type="radio" id="Groot" class="visually-hidden" checked>
+			<section class"klik-op-filter">
+				<button type="button" name="button">Filter</button>
+				<nav></nav>
+			</section>
+
+			<section class"klik-op-sorteren">
+				<button type="button" name="button">Sorteren</button>
+				<nav></nav>
+			</section>
+
+				<input type="radio" id="groot" name="view" class="visually-hidden" checked>
 				<label for="groot">Grote foto's</label>
-				<input type="radio" id="Klein" class="visually-hidden">
+				<input type="radio" id="klein" name="view" class="visually-hidden">
 				<label for="klein">Kleine foto's</label>
 			</fieldset>
 		 </form>
 
-		 <ul>
-		 	<li><img src="#" alt=""> <button type="button" name="button"></button></li>
-			<li><img src="" alt=""> <button type="button" name="button"></button></li>
-			<li><img src="" alt=""> <button type="button" name="button"></button></li>
-			<li><img src="" alt=""> <button type="button" name="button"></button></li>
-			<li><img src="" alt=""> <button type="button" name="button"></button></li>
-			<li><img src="" alt=""> <button type="button" name="button"></button></li>
+		 <ul id="theList">
+		 	<li class="name blauw"><img src="images/maldive.jpg" alt="Maledive strand"> <button type="button"></button>Maledive</li>
+			<li class="name blauw"><img src="images/maledive.jpg" alt="Maledive hut" class="name"> <button type="button" name="button"></button></li>
+			<li class="name paars oranje"><img src="images/bootkleur.jpg" alt="Boot met paarse achtergrond" class="name"> <button type="button" name="button"></button></li>
+			<li class="name groen oranje blauw"><img src="images/boot.jpg" alt="Gekleurde boot" class="name"> <button type="button" name="button"></button></li>
+			<li class="name groen blauw"><img src="images/groenbergen.jpg" alt="" class="name"> <button type="button" name="button"></button></li>
+			<li class="name oranje blauw"><img src="images/grot.jpg" alt="Grot" class="name"> <button type="button" name="button"></button></li>
+			<li class="name gekleurd blauw"><img src="images/huisjes.jpg" alt="Huisjes op het strand" class="name"> <button type="button" name="button"></button></li>
+			<li class="name blauw groen"><img src="images/springwater.jpg" alt="In het water springen" class="name"> <button type="button" name="button"></button></li>
+			<li class="name blauw groen"><img src="images/strandzee.jpg" alt="Strand en zee" class="name"> <button type="button" name="button"></button></li>
+			<li class="name zwartwit"><img src="images/surfen.jpg" alt="surfen" class="name"> <button type="button" name="button"></button></li>
+			<li class="name oranje paars geel"><img src="images/zonsondergang.jpg" alt="Zonsondergang" class="name"> <button type="button" name="button"></button></li>
+			<li class="name blauw oranje groen"><img src="images/uikijkzee.jpg" alt="Uitkijk op zee" class="name"> <button type="button" name="button"></button></li>
+			<li class="name oranje geel rood"><img src="images/tropical.jpg" alt="Tropische palmen" class="name"> <button type="button" name="button"></button></li>
+			<li class="name groen"><img src="images/palm.jpg" alt="Palm" class="name"> <button type="button" name="button"></button></li>
+			<li class="name zwartwit"><img src="images/apen.jpg" alt="Apen" class="name"> <button type="button" name="button"></button></li>
+
 		 </ul>
 
 
 
 
 	</main>
-
+	<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
 	<script src="scripts/script.js"></script>
 </body>
 
