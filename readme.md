@@ -116,11 +116,13 @@ Vervolgens ben ik verder gegaan met de zoekfunctie, button en filteroptie.
 <img width="405" alt="Schermafbeelding 2021-05-30 om 20 14 54" src="https://user-images.githubusercontent.com/70519367/120620033-db499500-c45c-11eb-95f1-00c6e2b8e9a4.png">
 
 - <b>Wat er goed ging</b>
-Het maken van mijn break-down schetsen ging goed. Dit heb ik tijdens het voortgangsgesprek besproken. Daaruit bleek dat ik fieldsets beter kon gebruiken bij bepaalde elementen. Ook heb ik geleerd hoe ik een gekleurde checkbox kan maken. 
+Wat god ging was het maken van de filter opties, omdat we deze vorige week hadden besproken. Dit was mij gelukt. Dinsdag heb ik samen met Sanne een ervoor gezorgd dat de afbeeldingen verschillende groottes kunnen krijgen met twee buttons. 
+<img width="589" alt="Schermafbeelding 2021-06-03 om 11 23 13" src="https://user-images.githubusercontent.com/70519367/120621421-26b07300-c45e-11eb-8851-9a008d715da2.png">
+
 
 
 - <b>Wat er lastig is</b>
-Ik liep al snel tegen het probleem aan dat ik niet wist hoe ik de gekleurde bolletjes moest gaan maken, zodat de mensen konden filteren op bepaalde kleuren foto's. 
+Het lastige vond ik het laten werken van de zoekfunctie, de kleurfilteropties laten werken op de afbeeldingen en de filter maken, zodat er een wit scherm overheen komt, zodat de gebruiker een filter kan instellen. 
 
 - <b>Wat je plannen zijn</b>
-Mijn plannen voor de komende weken zijn om de te beginnen met de header. Het maken van de zoekbalk. 
+Mijn plannen zijn het verder gaan met 
