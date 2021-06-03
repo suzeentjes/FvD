@@ -125,4 +125,4 @@ Wat god ging was het maken van de filter opties, omdat we deze vorige week hadde
 Het lastige vond ik het laten werken van de zoekfunctie, de kleurfilteropties laten werken op de afbeeldingen en de filter maken, zodat er een wit scherm overheen komt, zodat de gebruiker een filter kan instellen. 
 
 - <b>Wat je plannen zijn</b>
-Mijn plannen zijn het verder gaan met 
+Mijn plannen zijn het verder gaan met mijn ontwerp. Donderdag heb ik een gesprek met Sam, zodat ik bepaalde problemen kan oplossen waar ik tegenaan loop. 
