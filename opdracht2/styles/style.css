@@ -5,52 +5,57 @@
 
 
 /* ALGEMENE STYLING */
-*, *::after, *::before {
-  box-sizing:border-box;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 body {
-  font-family:eenfont, sans-serif;
-  color:#111;
-  background-color:#FFFFFF;
+  font-family: eenfont, sans-serif;
+  color: #111;
+  background-color: #FFFFFF;
 }
 
 
 /* BRAND STYLING */
 
 header section {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin: 2em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2em 1em;
 }
 
-header section > img{
-	width: min(20vw, 10em);
+header section>img {
+  width: min(20vw, 10em);
 }
 
-header section input{
-	width: min(35vw, 30em);
-	height: min(10vw, 2.5em);
-	background-color: #eee;
-	border: 0.25em solid #eee;
-	border-radius: 0.5em;
-	padding-left: 1em;
+main input {
+  width: min(35vw, 30em);
+  height: min(10vw, 2.5em);
+  background-color: #eee;
+  border: 0.25em solid #eee;
+  border-radius: 0.5em;
+  padding-left: 1em;
+  margin: 1em auto;
+  display: flex;
+
 }
 
-header section a img{
-	width: min(6vw, 2em);
+header section a img {
+  width: min(6vw, 2em);
 }
 
 /*Filter kleur opties | fieldset 1*/
 fieldset {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 auto;
-	text-align: center;
-	width: min(90vw, 36em);
-	border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  width: min(90vw, 36em);
+  border: none;
 }
 
 .visually-hidden {
@@ -66,223 +71,272 @@ fieldset {
 
 
 fieldset:first-of-type label {
-	position:relative;
-	width:2em; height:2em;
-	border-radius: 50%;
-	overflow:hidden;
-	margin-right: 0.75em;
-	padding-left: 2em;
+  position: relative;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 0.75em;
+  padding-left: 2em;
 
 }
 
-fieldset:first-of-type input:nth-of-type(1) + label {
-	background-color:red;
+fieldset:first-of-type input:nth-of-type(1)+label {
+  background-color: red;
 }
 
-fieldset:first-of-type input:nth-of-type(2) + label {
-	background-color:purple;
+fieldset:first-of-type input:nth-of-type(2)+label {
+  background-color: purple;
 }
 
-fieldset:first-of-type input:nth-of-type(3) + label {
-	background-color:blue;
+fieldset:first-of-type input:nth-of-type(3)+label {
+  background-color: blue;
 }
 
-fieldset:first-of-type input:nth-of-type(4) + label {
-	background-color:green;
+fieldset:first-of-type input:nth-of-type(4)+label {
+  background-color: green;
 }
 
-fieldset:first-of-type input:nth-of-type(5) + label {
-	background-color:yellow;
+fieldset:first-of-type input:nth-of-type(5)+label {
+  background-color: yellow;
 }
 
-fieldset:first-of-type input:nth-of-type(6) + label {
-	background-color:orange;
+fieldset:first-of-type input:nth-of-type(6)+label {
+  background-color: orange;
 }
 
-fieldset:first-of-type input:nth-of-type(7) + label {
-	background: rgb(255,255,255);
-  background: linear-gradient(240deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(0,0,0,1) 49%, rgba(0,0,0,1) 97%);
-	border: 0.02em solid grey;
+fieldset:first-of-type input:nth-of-type(7)+label {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(240deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 48%, rgba(0, 0, 0, 1) 49%, rgba(0, 0, 0, 1) 97%);
+  border: 0.02em solid grey;
 }
 
-fieldset:first-of-type input:nth-of-type(8) + label {
-	background: rgb(255,98,52);
-  background: linear-gradient(270deg, rgba(255,98,52,1) 0%, rgba(250,195,50,1) 10%, rgba(159,252,52,1) 28%, rgba(55,255,166,1) 40%, rgba(59,223,252,1) 51%, rgba(49,142,250,1) 59%, rgba(39,45,246,1) 67%, rgba(177,46,255,1) 74%, rgba(238,5,255,1) 82%, rgba(255,41,108,1) 96%);
+fieldset:first-of-type input:nth-of-type(8)+label {
+  background: rgb(255, 98, 52);
+  background: linear-gradient(270deg, rgba(255, 98, 52, 1) 0%, rgba(250, 195, 50, 1) 10%, rgba(159, 252, 52, 1) 28%, rgba(55, 255, 166, 1) 40%, rgba(59, 223, 252, 1) 51%, rgba(49, 142, 250, 1) 59%, rgba(39, 45, 246, 1) 67%, rgba(177, 46, 255, 1) 74%, rgba(238, 5, 255, 1) 82%, rgba(255, 41, 108, 1) 96%);
 }
 
-fieldset:nth-of-type(1) input:focus + label,
+fieldset:nth-of-type(1) input:focus+label,
 fieldset:nth-of-type(1) label:hover {
-	box-shadow: 0 0 0 .25em grey;
+  box-shadow: 0 0 0 .25em grey;
 }
 
-fieldset:nth-of-type(1) input:checked + label::after {
-	content:"";
-	display:inline-block;
-	width:2em;
-	height:.75em;
-	border-style:solid;
-	border-width:0 0 2px 4px;
-	border-color:lightgrey;
-	transform:rotate(-45deg) skew(-15deg, -15deg);
-	position:absolute;
-	left:0; top:0em;
+fieldset:nth-of-type(1) input:checked+label::after {
+  content: "";
+  display: inline-block;
+  width: 2em;
+  height: .75em;
+  border-style: solid;
+  border-width: 0 0 2px 4px;
+  border-color: lightgrey;
+  transform: rotate(-45deg) skew(-15deg, -15deg);
+  position: absolute;
+  left: 0;
+  top: 0em;
 }
 
-	/*Filter buttons linker | fieldset 2 */
-	fieldset:nth-of-type(2) section button {
-		background-color: #eee;
-		border: 0.15em solid #eee;
-		padding: 1.5em 2em;
-		border-radius: 0.5em;
-		margin-right: 0.5em;
-		font-weight: 400;
-    background-size: 1.5em;
-  	background-repeat: no-repeat;
-    background-position: 0.25em center;
+/*Filter buttons linker | fieldset 2 */
+fieldset:nth-of-type(2) section button {
+  background-color: #eee;
+  border: 0.15em solid #eee;
+  padding: 1.5em 2em;
+  border-radius: 0.5em;
+  margin-right: 0.5em;
+  font-weight: 400;
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: 0.25em center;
 
-	}
-
-	fieldset:nth-of-type(2) section:nth-of-type(1) button:nth-of-type(1) {
-	background-image: url('../images/filter.svg') ;
-
-	}
-
-	fieldset:nth-of-type(2) section:nth-of-type(2) button:nth-of-type(1) {
-    background-image: url('../images/sort.svg') ;
-
-	}
-
-  ul.theList li:not(.rood) {
-    display:none;
-    }
-
-  ul.theList li:not(.paars) {
-    display:none;
-    }
-
-  ul.theList li:not(.blauw) {
-    display:none;
-  }
-
-  ul.theList li:not(.groen) {
-    display:none;
-    }
-
-  ul.theList li:not(.geel) {
-    display:none;
-    }
-
-  ul.theList li:not(.oranje) {
-    display:none;
-  }
-
-  ul.theList li:not(.zwartwit) {
-    display:none;
-    }
-
-  ul.theList li:not(.gekleurd) {
-    display:none;
-    }
-
-  ul.items li:not(.item) {
-    display:none;
-  }
-
-
-
-
-  /*Filteren*/
-
-  section.klik-op-filter {
-    overflow:hidden;
 }
 
-  section.klik-op-filter button:hover {
-    background-color: green;
-    color: red;
-  }
+fieldset:nth-of-type(2) section:nth-of-type(1) button:nth-of-type(1) {
+  background-image: url('../images/filter.svg');
 
-  section.klik-op-filter nav {
-    position:absolute;
-    width:100%;
-    height:100%;
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-    background-color: black;
-    border-radius:inherit;
-    transform:translatex(calc(-100% + 1.5em));
-    transition:1s;
-  }
+}
 
+fieldset:nth-of-type(2) section:nth-of-type(2) button:nth-of-type(1) {
+  background-image: url('../images/sort.svg');
 
-  section.klik-op-filter nav.toonMenu {
-    transform:translatex(0);
-  }
+}
 
+ul.rood li:not(.rood) {
+  display: none;
+}
 
+ul.rood li.rood {
+  display: block !important;
+}
 
+ul.paars li:not(.paars) {
+  display: none;
+}
 
+ul.paars li.paars {
+  display: block !important;
+}
 
-	/*Filter buttons rechter | fieldset 2 */
+ul.blauw li:not(.blauw) {
+  display: none;
+}
 
-  fieldset:nth-of-type(2) label {
-  	display: inline-block;
-  	width:3em; height:3em;
-  	border: 0.05em solid grey;
-  	overflow:hidden;
-  	margin-left: 0.75em;
-    padding-left: 2.88em;
+ul.blauw li.blauw {
+  display: block !important;
+}
 
-  }
+ul.groen li:not(.groen) {
+  display: none;
+}
 
-  fieldset:nth-of-type(2) input:nth-of-type(1) + label{
-    background-image: url('../images/grootte-foto-grijs.svg');
-    background-repeat: no-repeat;
-  }
+ul.groen li.groen {
+  display: block !important;
+}
 
-  fieldset:nth-of-type(2) input:nth-of-type(2) + label {
-    background-image: url('../images/kleine-foto-grijs.svg');
-    background-repeat: no-repeat;
-  }
+ul.geel li:not(.geel) {
+  display: none;
+}
 
-  fieldset:nth-of-type(2) input:focus + label,
-  fieldset:nth-of-type(2) label:hover {
-  	box-shadow: 0 0 0 .25em grey;
-  }
+ul.geel li.geel {
+  display: block !important;
+}
 
-  fieldset:nth-of-type(2) input:nth-of-type(1):checked + label {
-    background-image: url('../images/grootte-foto-zwart.svg');
-  }
+ul.oranje li:not(.oranje) {
+  display: none;
+}
 
-  fieldset:nth-of-type(2) input:nth-of-type(2):checked + label {
-    background-image: url('../images/kleine-foto-zwart.svg');
-  }
+ul.oranje li.oranje {
+  display: block !important;
+}
 
+ul.zwartwit li:not(.zwartwit) {
+  display: none;
+}
 
+ul.zwartwit li.zwartwit {
+  display: block !important;
+}
 
+ul.gekleurd li:not(.gekleurd) {
+  display: none;
+}
 
-
-  /*Afbeeldingen main*/
-
-  ul {
-    margin: 0;
-    padding: 2em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2em;
-  }
-
-  ul li img {
-    width: 100%;
-    height: auto;
-  }
+ul.gekleurd li.gekleurd {
+  display: block !important;
+}
 
 
-  ul li {
-    list-style-type: none;
-  }
+.list li button svg {
+  width: 2em;
+  height: 2em;
+  pointer-events: none;
+}
 
-  ul.drieBijDrie {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.list li.favoriet button svg {
+
+  fill: red;
+}
+
+
+
+/*Filteren*/
+
+
+
+section.klik-op-filter button:hover, section.klik-op-sorteren button:hover {
+  background-color: darkgrey;
+  color: black;
+}
+
+main section.klik-op-filter nav {
+
+}
+
+
+section.klik-op-filter nav.toonMenu {
+  transform: translatex(0);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+
+
+
+
+
+/*Filter buttons rechter | fieldset 2 */
+
+fieldset:nth-of-type(2) label {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  border: 0.05em solid grey;
+  overflow: hidden;
+  margin-left: 0.75em;
+  padding-left: 2.88em;
+
+}
+
+fieldset:nth-of-type(2) input:nth-of-type(1)+label {
+  background-image: url('../images/grootte-foto-grijs.svg');
+  background-repeat: no-repeat;
+}
+
+fieldset:nth-of-type(2) input:nth-of-type(2)+label {
+  background-image: url('../images/kleine-foto-grijs.svg');
+  background-repeat: no-repeat;
+}
+
+fieldset:nth-of-type(2) input:focus+label,
+fieldset:nth-of-type(2) label:hover {
+  box-shadow: 0 0 0 .25em grey;
+}
+
+fieldset:nth-of-type(2) input:nth-of-type(1):checked+label {
+  background-image: url('../images/grootte-foto-zwart.svg');
+}
+
+fieldset:nth-of-type(2) input:nth-of-type(2):checked+label {
+  background-image: url('../images/kleine-foto-zwart.svg');
+}
+
+
+
+
+
+/*Afbeeldingen main*/
+
+ul {
+  margin: 0;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+ul li img {
+  width: 100%;
+  height: auto;
+
+}
+
+
+ul li {
+  list-style-type: none;
+  cursor:grab;
+}
+
+ul.drieBijDrie {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+/*Drag en drop Sanne */
+li.sortable-ghost {
+  opacity:.25;
+}
+
+li.sortable-drag {
+  background:gold;
+  cursor:grabbing;
