@@ -1,21 +1,32 @@
 // JavaScript Document
 //Sanne heeft hierbij geholpen
+var eenBijEen = document.querySelector('#super');
 var tweeBijTwee = document.querySelector('#groot');
 var drieBijDrie = document.querySelector('#klein');
 
+eenBijEen.addEventListener('change', naarEenBijEen);
 tweeBijTwee.addEventListener('change', naarTweeBijTwee);
 drieBijDrie.addEventListener('change', naarDrieBijDrie);
+
+function naarEenBijEen(event) {
+  var deLijst = document.querySelector('ul');
+  deLijst.classList.add('eenBijEen');
+  deLijst.classList.remove('drieBijDrie');
+  deLijst.classList.remove('tweeBijTwee');
+}
 
 function naarTweeBijTwee(event) {
   var deLijst = document.querySelector('ul');
   deLijst.classList.add('tweeBijTwee');
   deLijst.classList.remove('drieBijDrie');
+  deLijst.classList.remove('eenBijEen');
 }
 
 function naarDrieBijDrie(event) {
   var deLijst = document.querySelector('ul');
   deLijst.classList.add('drieBijDrie');
   deLijst.classList.remove('tweeBijTwee');
+  deLijst.classList.remove('eenBijEen');
 }
 
 
@@ -35,6 +46,18 @@ function menuTonen(event) {
 }
 
 deButton.addEventListener("click", menuTonen);
+
+
+//Filter optie button 2
+var deButton = document.querySelector("section.klik-op-sorteren button");
+
+
+function menuTonen2(event) {
+  let deNav = document.querySelector("section.klik-op-sorteren nav");
+  deNav.classList.toggle("toonMenu2");
+}
+
+deButton.addEventListener("click", menuTonen2);
 
 
 //Filter kleur optie
@@ -83,15 +106,55 @@ function filterenMaar(event) {
   })
 }
 
+//Hartje button / Sam heeft geholpen
 const allHearts = document.querySelectorAll('.list li button')
 
 function handleHeartClick(event) {
   event.target.parentElement.classList.toggle('favoriet')
+
 }
 
 allHearts.forEach(heart => {
   heart.addEventListener('click', handleHeartClick)
 })
+
+
+// Hartje 1,2,3,4 etc geklikt / Sam heeft geholpen
+
+
+var hartjeNummer = document.querySelector('header section a strong');
+
+
+console.log(allHearts)
+
+var counter = 0;
+
+allHearts.forEach(heart => {
+  heart.addEventListener('click', (event) => {
+    event.target.classList.toggle('Voegtoe')
+    counter++
+    hartjeNummer.textContent = counter;
+  })
+
+});
+
+//Hartje verplaatsen
+
+
+// Filter Afgeronde hoeken
+
+var afgerondeHoeken = document.querySelector('.hoekenja');
+
+function toonAfgerondeHoeken(event) {
+  let deImg = document.querySelector(".list li img");
+  deImg.classList.add("toonHoeken");
+}
+
+afgerondeHoeken.addEventListener("click", toonAfgerondeHoeken)
+
+
+
+
 
 
 // drag en drop Sanne github oefeningen
@@ -101,59 +164,3 @@ var options = {
 
 var deLijst = document.getElementById('list');
 var sortable = Sortable.create(deLijst, options);
-
-
-
-
-
-
-interact('.dropzone').dropzone({
-  // only accept elements matching this CSS selector
-  accept: '#yes-drop',
-  // Require a 75% element overlap for a drop to be possible
-  overlap: 0.75,
-
-  // listen for drop related events:
-
-  ondropactivate: function (event) {
-    // add active dropzone feedback
-    event.target.classList.add('drop-active')
-  },
-  ondragenter: function (event) {
-    var draggableElement = event.relatedTarget
-    var dropzoneElement = event.target
-
-    // feedback the possibility of a drop
-    dropzoneElement.classList.add('drop-target')
-    draggableElement.classList.add('can-drop')
-    draggableElement.textContent = 'Dragged in'
-  },
-  ondragleave: function (event) {
-    // remove the drop feedback style
-    event.target.classList.remove('drop-target')
-    event.relatedTarget.classList.remove('can-drop')
-    event.relatedTarget.textContent = 'Dragged out'
-  },
-  ondrop: function (event) {
-    event.relatedTarget.textContent = 'Dropped'
-  },
-  ondropdeactivate: function (event) {
-    // remove active dropzone feedback
-    event.target.classList.remove('drop-active')
-    event.target.classList.remove('drop-target')
-  }
-})
-
-interact('.drag-drop')
-  .draggable({
-    inertia: true,
-    modifiers: [
-      interact.modifiers.restrictRect({
-        restriction: 'parent',
-        endOnly: true
-      })
-    ],
-    autoScroll: true,
-    // dragMoveListener from the dragging demo above
-    listeners: { move: dragMoveListener }
-  })
