@@ -126,3 +126,21 @@ Het lastige vond ik het laten werken van de zoekfunctie, de kleurfilteropties la
 
 - <b>Wat je plannen zijn</b>
 Mijn plannen zijn het verder gaan met mijn ontwerp. Donderdag heb ik een gesprek met Sam, zodat ik bepaalde problemen kan oplossen waar ik tegenaan loop. 
+
+
+## Week 8/9
+
+Deze week liep ik tegen het probleem aan dat mijn checkboxen (de kleurtjes) wel werkte alleen niet wanneer je er meer aan wilde klikken. 
+<img width="823" alt="Schermafbeelding 2021-06-08 om 11 57 19" src="https://user-images.githubusercontent.com/70519367/121165634-b2584400-c850-11eb-9406-f2ba914eef37.png">
+
+Ik heb Sam op hulp gevraagd en na een tijdje kwam hij eruit wat hij moest doen om dit te veranderen. Ik vind het zelf nog lastig uit te leggen wat er precies gedaan wordt. Dit is de onderstaande code die Sam heeft toegevoegd. 
+
+<img width="465" alt="Schermafbeelding 2021-06-08 om 11 55 19" src="https://user-images.githubusercontent.com/70519367/121165360-7f15b500-c850-11eb-91e4-6ac572683144.png">
+
+Ook ben ik deze week bezig geweest met de filter en sorteer optie. Bij het filter heb ik gebruik gemaakt van een schuif-menu. 
+<img width="834" alt="Schermafbeelding 2021-06-08 om 11 52 04" src="https://user-images.githubusercontent.com/70519367/121165984-f9ded000-c850-11eb-9600-9c68a57d145c.png">
+
+
+
+
+
