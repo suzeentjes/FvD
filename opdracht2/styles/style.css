@@ -14,8 +14,38 @@
 body {
   font-family: eenfont, sans-serif;
   color: #111;
-  background-color: #FFFFFF;
+  background-color: var(--achtergrond);
 }
+
+
+:root {
+	--grijzeAchtergronden:#eee;
+	--achtergrond:white;
+  --kleurRood: red;
+  --kleurPaars: purple;
+  --kleurBlauw: blue;
+  --kleurGroen: green;
+  --kleurGeel: yellow;
+  --kleurOranje: orange;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--grijzeAchtergronden:lightgrey;
+    --donkerGrijzeAchtergronden: darkgrey;
+		--achtergrond:grey;
+    --kleurRood: red;
+    --kleurPaars: purple;
+    --kleurBlauw: blue;
+    --kleurGroen: green;
+    --kleurGeel: yellow;
+    --kleurOranje: orange;
+
+	}
+}
+
+
+
 
 
 /* BRAND STYLING */
@@ -31,11 +61,11 @@ header section>img {
   width: min(20vw, 10em);
 }
 
-main input {
+main > input {
   width: min(35vw, 30em);
   height: min(10vw, 2.5em);
   background-color: #eee;
-  border: 0.25em solid #eee;
+  border: 0.25em solid var(--grijzeAchtergronden);
   border-radius: 0.5em;
   padding-left: 1em;
   margin: 1em auto;
@@ -45,6 +75,30 @@ main input {
 
 header section a img {
   width: min(6vw, 2em);
+}
+
+header section a img.turn {
+  animation: hartjeDraaien 4s linear;
+}
+
+
+@keyframes hartjeDraaien {
+	0% {
+		transform: rotate(0) scale(0);
+	}
+
+  60% {
+    transform: rotate(1turn);
+  }
+
+  70% {
+    transform: scale(1.5);
+  }
+
+	100% {
+		 transform: scale(1);
+	}
+
 }
 
 /*Filter kleur opties | fieldset 1*/
@@ -82,27 +136,27 @@ fieldset:first-of-type label {
 }
 
 fieldset:first-of-type input:nth-of-type(1)+label {
-  background-color: red;
+  background-color: var(--kleurRood);
 }
 
 fieldset:first-of-type input:nth-of-type(2)+label {
-  background-color: purple;
+  background-color: var(--kleurPaars);
 }
 
 fieldset:first-of-type input:nth-of-type(3)+label {
-  background-color: blue;
+  background-color: var(--kleurBlauw);
 }
 
 fieldset:first-of-type input:nth-of-type(4)+label {
-  background-color: green;
+  background-color: var(--kleurGroen);
 }
 
 fieldset:first-of-type input:nth-of-type(5)+label {
-  background-color: yellow;
+  background-color: var(--kleurGeel);
 }
 
 fieldset:first-of-type input:nth-of-type(6)+label {
-  background-color: orange;
+  background-color: var(--kleurOranje);
 }
 
 fieldset:first-of-type input:nth-of-type(7)+label {
@@ -118,7 +172,7 @@ fieldset:first-of-type input:nth-of-type(8)+label {
 
 fieldset:nth-of-type(1) input:focus+label,
 fieldset:nth-of-type(1) label:hover {
-  box-shadow: 0 0 0 .25em grey;
+  box-shadow: 0 0 0 .25em var(--grijzeAchtergronden);
 }
 
 fieldset:nth-of-type(1) input:checked+label::after {
@@ -128,7 +182,7 @@ fieldset:nth-of-type(1) input:checked+label::after {
   height: .75em;
   border-style: solid;
   border-width: 0 0 2px 4px;
-  border-color: lightgrey;
+  border-color: var(--grijzeAchtergronden);
   transform: rotate(-45deg) skew(-15deg, -15deg);
   position: absolute;
   left: 0;
@@ -137,8 +191,8 @@ fieldset:nth-of-type(1) input:checked+label::after {
 
 /*Filter buttons linker | fieldset 2 */
 fieldset:nth-of-type(2) section button {
-  background-color: #eee;
-  border: 0.15em solid #eee;
+  background-color: var(--grijzeAchtergronden);
+  border: 0.15em solid var(--grijzeAchtergronden);
   padding: 1.5em 2em;
   border-radius: 0.5em;
   margin-right: 0.5em;
@@ -230,12 +284,14 @@ ul.gekleurd li.gekleurd {
 
 /*Filteren*/
 
-section.klik-op-filter button:hover, section.klik-op-sorteren button:hover {
-  background-color: darkgrey;
-  color: black;
+section.klik-op-filter button:hover {
+  background-color: var(--donkerGrijzeAchtergronden);
+  color: var(--achtergrond);
 }
 
-main section.klik-op-filter nav, main section.klik-op-sorteren nav {
+
+
+main section.klik-op-filter nav {
   position: absolute;
   transition: 1s;
   transform:translatey(100%);
@@ -246,36 +302,78 @@ main section.klik-op-filter aside {
   margin: -1000em;
 }
 
-section.klik-op-filter nav.toonMenu, section.klik-op-sorteren nav.toonMenu2   {
+
+
+section.klik-op-filter nav.toonMenu {
   position: fixed;
   transform: translatex(0) translatey(0);
   width: 100vw;
   height: 50vh;
   bottom: 0;
   left: 0;
-  background-color: white;
+  background-color: var(--achtergrond);
   border-radius: 0.5em;
-  z-index: 100;
+  z-index: 200;
+  transition:1s;
 }
 
-/*Afgeronde hoeken*/
+
 fieldset:nth-of-type(2) section nav.toonMenu input:nth-of-type(1)+label,
 fieldset:nth-of-type(2) section nav.toonMenu input:nth-of-type(2)+label {
   width: 4em;
   height: 3em;
   border-radius: 0.5em;
-  background-color: #eee;
-  border: 0.25em solid #eee;
+  background-color: var(--grijzeAchtergronden);
+  border: 0.25em solid var(--grijzeAchtergronden);
   background-image: none;
   padding-left: 0;
   align-items: center;
 
 }
 
-main section.klik-op-filter nav.toonMenu  aside{
-  display: block;
+main section.klik-op-filter nav.toonMenu aside{
+  display: flex;
   margin: 2em auto;
+  z-index: 200;
+  text-align: center;
 }
+
+
+main section.klik-op-filter nav img {
+  width: 2em;
+  height: 2em;
+}
+
+section nav button:nth-of-type(1):hover, section nav button:nth-of-type(2):hover {
+  background-color: var(--kleurOranje);
+  border-color: var(--kleurOranje);
+}
+
+fieldset:nth-of-type(2) section:nth-of-type(1) nav button:nth-of-type(1) {
+  background-image: none;
+}
+
+main section.klik-op-filter  {
+  flex-direction: column;
+}
+
+ul.list li img.vierkant {
+  border-radius: 0%;
+}
+
+ul.list li img.beetjeVierkant {
+  border-radius: 10%;
+}
+
+ul.list li img.ronder {
+  border-radius: 40%;
+}
+
+ul.list li img.rond {
+  border-radius: 50%;
+}
+
+
 
 
 
@@ -287,7 +385,7 @@ fieldset:nth-of-type(2) label {
   display: inline-block;
   width: 3em;
   height: 3em;
-  border: 0.05em solid grey;
+  border: 0.05em solid var(--grijzeAchtergronden);
   overflow: hidden;
   margin-left: 0.75em;
   padding-left: 2.88em;
@@ -313,7 +411,7 @@ fieldset:nth-of-type(2) input:nth-of-type(3)+label {
 
 fieldset:nth-of-type(2) input:focus+label,
 fieldset:nth-of-type(2) label:hover {
-  box-shadow: 0 0 0 .25em grey;
+  box-shadow: 0 0 0 .25em var(--grijzeAchtergronden);
 }
 
 fieldset:nth-of-type(2) input:nth-of-type(1):checked+label {
@@ -386,8 +484,7 @@ ul.drieBijDrie {
 }
 
 .list li.favoriet button svg {
-  fill: red;
-
+  fill: var(--kleurRood);
 }
 
 
@@ -397,28 +494,14 @@ li.sortable-ghost {
 }
 
 li.sortable-drag {
-  border: 0.25em solid blue;
-  cursor:grabbing;
+  border: 0.25em solid var(--kleurBlauw);
+  cursor: grabbing;
 }
 
-header a img {
-  	0% {
-  		transform: rotate(1turn);
-  	}
 
-  	100% {
-  		transform: rotate(1turn);
-      transition: 1s;
-  	}
 
-}
 
-/*Toon afgeronde hoeken*/
-
-.list li img.toonHoeken {
-  border-radius: 5em;
-}
-
+/*De button in mijn css moet worden veranderd */
 
 @media (max-width: 800px) {
   .list li button svg {

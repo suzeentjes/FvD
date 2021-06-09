@@ -53,28 +53,31 @@
 				<section class="klik-op-filter">
 					<button type="button" name="button">Filter</button>
 					<nav>
+						<aside>sorteer op:
+							<button class="sort" data-sort="name">naam</button>
+							<button class="sort" data-sort="movie"  data-default-order='asc'>film</button>
+  					</aside>
+
 						<aside>
-			      Vierkant <input aria-label="maat" type="range" id="maat" name="maat" min="1" max="4" value="3" step="1" list="tickmarks"> Rond
+			      Vierkant <input aria-label="maat" type="range" id="maat" name="maat" min="1" max="4" value="1" step="1" list="tickmarks"> Rond
     				</aside>
 						<datalist id="tickmarks">
 					    <option value="1" label="vierkant"></option>
 					    <option value="2" label="beetjeVierkant"></option>
 					    <option value="3" label="ronder"></option>
-					    <option value="4" label="nogRonder"></option>
-					    <option value="5" label="Rond"></option>
+					    <option value="4" label="Rond"></option>
   					</datalist>
 
+						<button id="opslaan" type="button" name="button">Opslaan</button>
+
+
 					</nav>
 				</section>
 
-				<section class="klik-op-sorteren">
-					<button type="button" name="button">Sorteren</button>
-					<nav>
-					</nav>
-				</section>
+
 
 				<input type="radio" id="super" name="view" class="visually-hidden">
-				<label for="groot">Hele grote foto's</label>
+				<label for="super">Hele grote foto's</label>
 
 				<input type="radio" id="groot" name="view" class="visually-hidden" checked>
 				<label for="groot">Grote foto's</label>

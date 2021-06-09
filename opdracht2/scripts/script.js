@@ -48,16 +48,7 @@ function menuTonen(event) {
 deButton.addEventListener("click", menuTonen);
 
 
-//Filter optie button 2
-var deButton = document.querySelector("section.klik-op-sorteren button");
 
-
-function menuTonen2(event) {
-  let deNav = document.querySelector("section.klik-op-sorteren nav");
-  deNav.classList.toggle("toonMenu2");
-}
-
-deButton.addEventListener("click", menuTonen2);
 
 
 //Filter kleur optie
@@ -109,50 +100,146 @@ function filterenMaar(event) {
 //Hartje button / Sam heeft geholpen
 const allHearts = document.querySelectorAll('.list li button')
 
-function handleHeartClick(event) {
-  event.target.parentElement.classList.toggle('favoriet')
-
-}
-
-allHearts.forEach(heart => {
-  heart.addEventListener('click', handleHeartClick)
-})
 
 
 // Hartje 1,2,3,4 etc geklikt / Sam heeft geholpen
 
 
 var hartjeNummer = document.querySelector('header section a strong');
-
-
-console.log(allHearts)
+var deNavigatie = document.querySelector('header section a img ');
 
 var counter = 0;
 
 allHearts.forEach(heart => {
   heart.addEventListener('click', (event) => {
-    event.target.classList.toggle('Voegtoe')
-    counter++
-    hartjeNummer.textContent = counter;
+    if (heart.parentElement.classList.contains('favoriet')) {
+
+      heart.parentElement.classList.remove('favoriet');
+
+      counter--;
+      hartjeNummer.textContent = counter
+
+
+    }
+    else  {
+
+      heart.parentElement.classList.add('favoriet');
+
+      counter++;
+      hartjeNummer.textContent = counter
+
+      deNavigatie.classList.add('hartAnimatie');
+
+    }
+
+
   })
 
 });
 
-//Hartje verplaatsen
+//Animatie Hartje
+const button = document.querySelectorAll('ul.list li button');
 
+var hetHartje = document.querySelector('header section a img');
 
-// Filter Afgeronde hoeken
+function handleClick(e){
 
-var afgerondeHoeken = document.querySelector('.hoekenja');
-
-function toonAfgerondeHoeken(event) {
-  let deImg = document.querySelector(".list li img");
-  deImg.classList.add("toonHoeken");
+  //voeg class toe op klik, dus zet animatie aan
+  hetHartje.classList.add('turn')
 }
 
-afgerondeHoeken.addEventListener("click", toonAfgerondeHoeken)
+function handleAnimationEnd(e){
+//   verwijder de class wanneer de animatie eindigd, dus zet animatie op pauze
+  hetHartje.classList.remove('turn')
+}
 
 
+
+hetHartje.addEventListener('animationend', handleAnimationEnd)
+
+
+for (var i = 0; i < button.length; i++) {
+  button[i].addEventListener('click', handleClick)
+
+}
+
+
+
+//Filter slider
+var deSlider = document.querySelector("main fieldset section.klik-op-filter nav aside input[type='range']");
+
+function veranderMaat() {
+  let deRondeHoeken = document.querySelectorAll("ul.list li img");
+  console.log(deRondeHoeken);
+
+   let nieuweMaat = parseInt(deSlider.value);
+
+
+
+  for (var i = 0; i < deRondeHoeken.length; i++) {
+  console.log(i);
+  deRondeHoeken[i].className = "";
+  switch(nieuweMaat) {
+    case 1:
+      deRondeHoeken[i].classList.add("vierkant");
+      break;
+    case 2:
+      deRondeHoeken[i].classList.add("beetjeVierkant");
+      break;
+    case 3:
+      deRondeHoeken[i].classList.add("ronder");
+      break;
+    case 4:
+      deRondeHoeken[i].classList.add("rond");
+      break;
+    }
+  }
+}
+
+deSlider.addEventListener('input', veranderMaat);
+
+
+
+//Filter opslaan
+
+var filterOpslaan = document.querySelector("#opslaan");
+
+function verwijderMenu(event) {
+  var menu = document.querySelector('section.klik-op-filter nav');
+  console.log(menu)
+  menu.classList.remove("toonMenu");
+}
+
+filterOpslaan.addEventListener('click', verwijderMenu);
+
+
+
+
+//toonMenu openen met pijlen / van oefeningen Sanne
+
+function openMenuMetToetsen(event) {
+
+  let deNav = document.querySelector("section.klik-op-filter nav");
+
+
+  switch(event.key) {
+
+    case "ArrowRight":
+      deNav.classList.add("toonMenu");
+
+      break;
+
+    case "ArrowLeft":
+      deNav.classList.remove("toonMenu");
+      break;
+
+    case "Escape":
+      deNav.classList.remove("toonMenu");
+      break;
+  }
+}
+
+document.addEventListener('keydown', openMenuMetToetsen);
 
 
 
